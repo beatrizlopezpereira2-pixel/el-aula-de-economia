@@ -45,13 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     inicio.style.display = "none";
 
-if (id === "niveles") {
-  niveles.style.display = "";
-} else {
-  niveles.style.display = "none";
-  destino.classList.add("activa");
-}
-    
+    if (id === "niveles") {
+      niveles.style.display = "";
+    } else {
+      niveles.style.display = "none";
+      destino.classList.add("activa");
+    }
 
     window.scrollTo({
       top: 0,
@@ -109,10 +108,8 @@ if (id === "niveles") {
       /* VOLVER AL INICIO */
 
       if (destino === "inicio") {
-
         mostrarInicio();
         return;
-
       }
 
 
@@ -143,7 +140,6 @@ if (id === "niveles") {
         }
 
         return;
-
       }
 
 
@@ -163,9 +159,7 @@ if (id === "niveles") {
   document.querySelectorAll(".btn-home").forEach(function (boton) {
 
     boton.addEventListener("click", function () {
-
       mostrarInicio();
-
     });
 
   });
@@ -187,18 +181,15 @@ if (id === "niveles") {
       /* INICIO */
 
       if (href === "#inicio") {
-
         evento.preventDefault();
-
         mostrarInicio();
-
+        return;
       }
 
 
       /* MI AULA */
 
       if (href === "#niveles") {
-
         evento.preventDefault();
 
         ocultarPantallas();
@@ -210,13 +201,13 @@ if (id === "niveles") {
           behavior: "smooth"
         });
 
+        return;
       }
 
 
       /* PROYECTO */
 
       if (href === "#proyecto") {
-
         evento.preventDefault();
 
         mostrarPantalla("cuarto-eso");
@@ -226,30 +217,39 @@ if (id === "niveles") {
           const proyecto = document.getElementById("proyecto");
 
           if (proyecto) {
-
             proyecto.scrollIntoView({
               behavior: "smooth",
               block: "start"
             });
-
           }
 
         }, 100);
 
+        return;
       }
+
 
       /* SOBRE MÍ */
 
-if (href === "#sobre-mi") {
-  evento.preventDefault();
-  mostrarPantalla("sobre-mi");
-  return;
-}
+      if (href === "#sobre-mi") {
+        evento.preventDefault();
+        mostrarPantalla("sobre-mi");
+        return;
+      }
+
+
+      /* INSPÍRATE */
+
+      if (href === "#inspirate") {
+        evento.preventDefault();
+        mostrarPantalla("inspirate");
+        return;
+      }
+
     });
 
   });
 
-  
 
   /* =====================================================
      PROYECTO EMPRENDEDOR DESPLEGABLE
@@ -265,7 +265,6 @@ if (href === "#sobre-mi") {
     botonProyecto.addEventListener("click", function () {
 
       proyecto.classList.toggle("abierto");
-
 
       if (flechaProyecto) {
 
@@ -283,13 +282,8 @@ if (href === "#sobre-mi") {
 
 
   /* =====================================================
-     ESTADO INICIAL
-  ===================================================== */
-
-  mostrarInicio();
-  /* ================================================
      BLOQUES DESPLEGABLES · 4.º ESO
-  ================================================= */
+  ===================================================== */
 
   document.querySelectorAll("#cuarto-eso .bloque").forEach(function (bloque) {
 
@@ -304,6 +298,12 @@ if (href === "#sobre-mi") {
     });
 
   });
+
+
+  /* =====================================================
+     ESTADO INICIAL
+  ===================================================== */
+
   mostrarInicio();
-  
+
 });
