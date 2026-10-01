@@ -1,149 +1,201 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const inicio = document.getElementById("inicio");
-  const niveles = document.getElementById("niveles");
   const pantallas = document.querySelectorAll(".pantalla");
 
-  function ocultarTodo() {
-    if (inicio) inicio.style.display = "none";
-    if (niveles) niveles.style.display = "none";
 
-    pantallas.forEach(function (p) {
-      p.style.display = "none";
-      p.classList.remove("activa");
+  /* =========================================================
+     OCULTAR TODAS LAS PANTALLAS
+  ========================================================= */
+
+  function ocultarTodo() {
+
+    if (inicio) {
+      inicio.style.display = "none";
+    }
+
+    pantallas.forEach(function (pantalla) {
+      pantalla.style.display = "none";
+      pantalla.classList.remove("activa");
     });
+
   }
+
+
+  /* =========================================================
+     MOSTRAR UNA PANTALLA
+  ========================================================= */
 
   function mostrar(id) {
 
     ocultarTodo();
 
     if (id === "inicio") {
-      if (inicio) inicio.style.display = "block";
-    }
 
-    else if (id === "niveles") {
-      if (niveles) niveles.style.display = "block";
-    }
-
-    else {
-      const seccion = document.getElementById(id);
-
-      if (seccion) {
-        seccion.style.display = "block";
-        seccion.classList.add("activa");
+      if (inicio) {
+        inicio.style.display = "block";
       }
+
+    } else {
+
+      const pantalla = document.getElementById(id);
+
+      if (pantalla) {
+        pantalla.style.display = "block";
+        pantalla.classList.add("activa");
+      }
+
     }
 
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
   }
 
 
-  /* MENÚ SUPERIOR */
+  /* =========================================================
+     MENÚ PRINCIPAL
+  ========================================================= */
 
-  document.querySelectorAll(".menu-principal a").forEach(function (enlace) {
+  document
+    .querySelectorAll(".menu-principal a")
+    .forEach(function (enlace) {
 
-    enlace.addEventListener("click", function (e) {
+      enlace.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const destino = enlace
+          .getAttribute("href")
+          .replace("#", "");
+
+        mostrar(destino);
+
+      });
+
+    });
+
+
+  /* =========================================================
+     LOGO → INICIO
+  ========================================================= */
+
+  const marca = document.querySelector(".marca");
+
+  if (marca) {
+
+    marca.addEventListener("click", function (e) {
 
       e.preventDefault();
-
-      const id = enlace.getAttribute("href").substring(1);
-
-      mostrar(id);
-
-    });
-
-  });
-
-
-  /* BOTONES DATA-IR */
-
-  document.querySelectorAll("[data-ir]").forEach(function (boton) {
-
-    boton.addEventListener("click", function (e) {
-
-      e.preventDefault();
-
-      mostrar(boton.getAttribute("data-ir"));
-
-    });
-
-  });
-
-
-  /* TARJETAS DE CURSOS */
-
-  document.querySelectorAll("[data-destino]").forEach(function (tarjeta) {
-
-    tarjeta.addEventListener("click", function () {
-
-      mostrar(tarjeta.getAttribute("data-destino"));
-
-    });
-
-  });
-
-
-  /* TEMAS */
-
-  document.querySelectorAll("[data-tema]").forEach(function (tema) {
-
-    tema.addEventListener("click", function (e) {
-
-      e.stopPropagation();
-
-      mostrar(tema.getAttribute("data-tema"));
-
-    });
-
-  });
-
-
-  /* BOTÓN HOME */
-
-  document.querySelectorAll(".btn-home").forEach(function (boton) {
-
-    boton.addEventListener("click", function () {
-
       mostrar("inicio");
 
     });
 
-  });
+  }
 
 
-  /* BLOQUES 4 ESO */
+  /* =========================================================
+     BOTONES data-ir
+  ========================================================= */
 
-  document.querySelectorAll("#cuarto-eso .bloque").forEach(function (bloque) {
+  document
+    .querySelectorAll("[data-ir]")
+    .forEach(function (boton) {
 
-    bloque.addEventListener("click", function () {
+      boton.addEventListener("click", function (e) {
 
-      bloque.classList.toggle("abierto");
+        e.preventDefault();
 
-    });
+        const destino = boton.getAttribute("data-ir");
 
-  });
+        mostrar(destino);
 
-
-  /* PROYECTOS */
-
-  document.querySelectorAll(".proyecto-desplegable").forEach(function (boton) {
-
-    boton.addEventListener("click", function () {
-
-      const proyecto = boton.closest(".proyecto-transversal");
-
-      if (proyecto) {
-        proyecto.classList.toggle("abierto");
-      }
+      });
 
     });
 
+
+  /* =========================================================
+     TARJETAS data-destino
+  ========================================================= */
+
+  document
+    .querySelectorAll("[data-destino]")
+    .forEach(function (tarjeta) {
+
+      tarjeta.addEventListener("click", function () {
+
+        const destino = tarjeta.getAttribute("data-destino");
+
+        mostrar(destino);
+
+      });
+
+    });
+
+
+  /* =========================================================
+     TEMAS 4.º ESO
+  ========================================================= */
+
+  document
+    .querySelectorAll("[data-tema]")
+    .forEach(function (tema) {
+
+      tema.addEventListener("click", function (e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const destino = tema.getAttribute("data-tema");
+
+        mostrar(destino);
+
+      });
+
+    });
+
+
+  /* =========================================================
+     PERMITIR ENLACES DIRECTOS
+     Ejemplo:
+     .../index.html#inspirate
+  ========================================================= */
+
+  function abrirDesdeURL() {
+
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash && document.getElementById(hash)) {
+      mostrar(hash);
+    } else {
+      mostrar("inicio");
+    }
+
+  }
+
+
+  /* =========================================================
+     BOTÓN ATRÁS / ADELANTE DEL NAVEGADOR
+  ========================================================= */
+
+  window.addEventListener("hashchange", function () {
+
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash && document.getElementById(hash)) {
+      mostrar(hash);
+    }
+
   });
 
 
-  /* AL CARGAR: INICIO */
+  /* =========================================================
+     INICIO DE LA WEB
+  ========================================================= */
 
-  mostrar("inicio");
+  abrirDesdeURL();
 
 });
