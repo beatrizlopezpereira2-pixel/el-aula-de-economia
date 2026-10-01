@@ -1,0 +1,3240 @@
+/* =========================================================
+   AULA ECO · STYLE.CSS
+========================================================= */
+
+:root {
+  --azul: #062b57;
+  --azul-oscuro: #031d3b;
+  --amarillo: #ffd83d;
+  --amarillo-suave: #fff4b8;
+  --blanco: #ffffff;
+  --fondo: #f7f6f1;
+  --gris: #667085;
+  --gris-claro: #e7e7e7;
+  --radio: 18px;
+  --sombra: 0 10px 30px rgba(3, 29, 59, 0.08);
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--azul);
+  background: var(--fondo);
+  line-height: 1.5;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+main {
+  min-height: 80vh;
+}
+
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+.cabecera {
+  min-height: 72px;
+  padding: 12px 5%;
+  background: var(--azul);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icono {
+  font-size: 1.7rem;
+}
+
+.logo div {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo strong {
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.logo span:not(.logo-icono) {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+.menu-principal {
+  display: flex;
+  gap: 24px;
+}
+
+.menu-principal a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.menu-principal a:hover {
+  color: var(--amarillo);
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.hero {
+  min-height: 520px;
+  padding: 70px 8%;
+  background: var(--amarillo);
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-contenido {
+  max-width: 680px;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 7px 12px;
+  margin-bottom: 18px;
+
+  border: 1.5px solid var(--azul);
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.hero h1 {
+  margin-bottom: 14px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.hero-subtitulo {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.hero-lema {
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   SELECTORES PORTADA
+========================================================= */
+
+.configuracion {
+  max-width: 650px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.campo select {
+  width: 100%;
+  padding: 11px 12px;
+
+  border: 1px solid rgba(6, 43, 87, 0.3);
+  border-radius: 10px;
+
+  background: white;
+  color: var(--azul);
+}
+
+
+/* =========================================================
+   GRÁFICO PORTADA
+========================================================= */
+
+.hero-grafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circulo-euro {
+  width: 210px;
+  height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 4px solid var(--azul);
+  border-radius: 50%;
+
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+.mini-iconos {
+  margin-top: 20px;
+  display: flex;
+  gap: 18px;
+  font-size: 1.8rem;
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.niveles,
+.estructura,
+.pagina-tema {
+  padding: 60px 6%;
+}
+
+.titulo-seccion {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.numero-seccion {
+  min-width: 48px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--gris);
+}
+
+.titulo-seccion small,
+.cabecera-tema small,
+.area-cabecera small {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.titulo-seccion h2 {
+  margin: 2px 0 8px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.titulo-seccion p {
+  max-width: 720px;
+  margin-bottom: 0;
+  color: var(--gris);
+}
+
+
+/* =========================================================
+   NIVELES
+========================================================= */
+
+.tarjetas-niveles {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.tarjeta-nivel {
+  min-height: 210px;
+  padding: 24px;
+
+  border: 1px solid rgba(6, 43, 87, 0.15);
+  border-radius: var(--radio);
+
+  background: white;
+  box-shadow: var(--sombra);
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tarjeta-nivel:hover {
+  transform: translateY(-4px);
+  border-color: var(--azul);
+}
+
+.nivel-icono {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.tarjeta-nivel small {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.tarjeta-nivel h3 {
+  margin: 5px 0;
+  font-size: 1.6rem;
+}
+
+.tarjeta-nivel p {
+  min-height: 48px;
+  margin-bottom: 15px;
+  color: var(--gris);
+}
+
+.flecha {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   PANTALLAS INTERIORES
+========================================================= */
+
+.pantalla {
+  display: none;
+}
+
+.pantalla.activa {
+  display: block;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.navegacion-pagina {
+  max-width: 1200px;
+  margin: 0 auto 35px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.navegacion-pagina button {
+  padding: 9px 14px;
+
+  border: 1px solid rgba(6, 43, 87, 0.18);
+  border-radius: 999px;
+
+  background: white;
+  color: var(--azul);
+
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.nav-anterior {
+  justify-self: start;
+}
+
+.nav-siguiente {
+  justify-self: end;
+}
+
+.btn-home {
+  width: 43px;
+  height: 43px;
+  padding: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.15rem;
+}
+
+.navegacion-pagina button:hover {
+  background: var(--amarillo);
+}
+
+
+/* =========================================================
+   BLOQUES 4.º ESO
+========================================================= */
+
+.bloques {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.bloque {
+  padding: 24px;
+
+  background: white;
+
+  border: 1px solid rgba(6, 43, 87, 0.14);
+  border-radius: var(--radio);
+
+  box-shadow: var(--sombra);
+}
+
+.letra-bloque {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--amarillo);
+  color: var(--azul);
+
+  font-weight: 900;
+}
+
+.bloque small {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.bloque h3 {
+  margin: 5px 0 20px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.temas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tema {
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 10px;
+  background: #f7f8fa;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tema:hover {
+  background: var(--amarillo-suave);
+}
+
+.tema span {
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.tema p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MI PROYECTO EMPRENDEDOR
+========================================================= */
+
+.proyecto-transversal {
+  max-width: 1200px;
+  margin: 22px auto 0;
+
+  overflow: hidden;
+
+  border: 2px solid var(--azul);
+  border-radius: var(--radio);
+
+  background: white;
+}
+
+.proyecto-desplegable {
+  width: 100%;
+  padding: 20px 24px;
+
+  border: 0;
+  background: var(--amarillo);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.proyecto-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.proyecto-icono {
+  font-size: 2rem;
+}
+
+.proyecto-cabecera small {
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.proyecto-cabecera h2 {
+  margin: 2px 0;
+  font-size: 1.35rem;
+}
+
+.proyecto-cabecera p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.flecha-proyecto {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+
+/* Proyecto cerrado inicialmente */
+
+.contenido-proyecto {
+  display: none;
+  padding: 22px;
+}
+
+
+/* Cuando JavaScript añada "abierto" */
+
+.proyecto-transversal.abierto .contenido-proyecto {
+  display: block;
+}
+
+.fases-proyecto {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.fases-proyecto article {
+  min-height: 145px;
+  padding: 16px;
+
+  border: 1px solid var(--gris-claro);
+  border-radius: 12px;
+
+  background: #fafafa;
+}
+/* =========================================================
+   NUEVA HOME · EL AULA DE ECONOMÍA
+========================================================= */
+
+.home-nueva {
+  background: #ffffff;
+  color: #0b3768;
+}
+
+
+/* HERO */
+
+.home-hero {
+  max-width: 1280px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 65px 6%;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+
+/* TEXTO */
+
+.home-texto {
+  max-width: 650px;
+}
+
+.home-etiqueta {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  background: #fff3b8;
+  color: #0b3768;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.home-texto h1 {
+  margin: 0;
+
+  color: #0b3768;
+
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+}
+
+.home-texto h1 span {
+  color: #f4bd00;
+}
+
+.home-autor {
+  margin: 10px 0 22px;
+
+  color: #667085;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.home-texto h2 {
+  margin: 0 0 8px;
+
+  color: #0b3768;
+
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+}
+
+.home-descripcion {
+  margin-bottom: 27px;
+
+  color: #667085;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+/* BOTÓN */
+
+.home-boton {
+  padding: 14px 22px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: #ffc400;
+  color: #0b3768;
+
+  box-shadow: 0 8px 20px rgba(11, 55, 104, 0.12);
+
+  font-weight: 900;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.home-boton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(11, 55, 104, 0.16);
+}
+
+
+/* BLOQUE VISUAL */
+
+.home-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-foto {
+  width: 100%;
+  max-width: 470px;
+  min-height: 340px;
+  padding: 35px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(circle at 80% 20%, #fff0a6 0 11%, transparent 12%),
+    radial-gradient(circle at 20% 75%, #dcecff 0 13%, transparent 14%),
+    linear-gradient(135deg, #eef6ff, #ffffff);
+
+  border: 1px solid #dce6f0;
+
+  box-shadow: 0 18px 45px rgba(11, 55, 104, 0.12);
+}
+
+.home-foto::before {
+  content: "📚";
+  position: absolute;
+
+  right: 55px;
+  top: 65px;
+
+  font-size: 7rem;
+
+  transform: rotate(-4deg);
+}
+
+.home-foto::after {
+  content: "💡";
+  position: absolute;
+
+  right: 165px;
+  top: 80px;
+
+  font-size: 4rem;
+}
+
+.home-foto-iconos {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  gap: 10px;
+}
+
+.home-foto-iconos span {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: white;
+
+  box-shadow: 0 6px 16px rgba(11, 55, 104, 0.1);
+
+  font-size: 1.25rem;
+}
+
+.home-mensaje {
+  width: fit-content;
+  max-width: 270px;
+  padding: 16px 18px;
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 15px;
+
+  background: #0b3768;
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(11, 55, 104, 0.18);
+}
+
+.home-mensaje strong {
+  color: #ffc400;
+  font-size: 1rem;
+}
+
+.home-mensaje span {
+  margin-top: 2px;
+  font-size: 0.86rem;
+}
+
+
+/* ACCESOS A NIVELES */
+
+.home-accesos {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 6% 55px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.home-acceso {
+  min-height: 150px;
+  padding: 19px;
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 13px;
+
+  border: 1px solid #dce6f0;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(11, 55, 104, 0.07);
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.home-acceso:hover {
+  transform: translateY(-4px);
+
+  border-color: #ffc400;
+
+  box-shadow: 0 12px 28px rgba(11, 55, 104, 0.11);
+}
+
+.home-acceso-icono {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #fff3b8;
+
+  font-size: 1.35rem;
+}
+
+.home-acceso small {
+  color: #7b8794;
+
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.home-acceso h3 {
+  margin: 2px 0;
+
+  color: #0b3768;
+
+  font-size: 1.2rem;
+}
+
+.home-acceso p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.home-flecha {
+  position: absolute;
+
+  right: 17px;
+  bottom: 13px;
+
+  color: #0b3768;
+
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+
+/* FRASE FINAL */
+
+.home-filosofia {
+  max-width: 1120px;
+  margin: 0 auto 60px;
+  padding: 22px 28px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  border-radius: 18px;
+
+  background: #fff8d8;
+  color: #0b3768;
+}
+
+.home-filosofia > span {
+  font-size: 2rem;
+}
+
+.home-filosofia p {
+  margin: 0;
+
+  font-size: 0.92rem;
+}
+
+.home-filosofia strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   NUEVA HOME · TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .home-visual {
+    justify-content: flex-start;
+  }
+
+  .home-foto {
+    max-width: 100%;
+  }
+
+  .home-accesos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   NUEVA HOME · MÓVIL
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .home-hero {
+    min-height: auto;
+    padding: 45px 5%;
+  }
+
+  .home-texto h1 {
+    font-size: 3.2rem;
+  }
+
+  .home-foto {
+    min-height: 280px;
+  }
+
+  .home-foto::before {
+    right: 30px;
+    font-size: 5.5rem;
+  }
+
+  .home-foto::after {
+    right: 125px;
+    font-size: 3.2rem;
+  }
+
+  .home-accesos {
+    padding: 0 5% 40px;
+    grid-template-columns: 1fr;
+  }
+
+  .home-filosofia {
+    margin: 0 5% 45px;
+  }
+
+}
+.fases-proyecto article > span {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--gris);
+}
+
+.fases-proyecto strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.fases-proyecto p {
+  margin: 4px 0;
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
+
+/* =========================================================
+   TEMA
+========================================================= */
+
+.pagina-tema {
+  max-width: 1320px;
+  margin: auto;
+}
+
+.cabecera-tema {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.cabecera-tema h2 {
+  margin: 4px 0 10px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.cabecera-tema p {
+  max-width: 760px;
+  margin: 0;
+
+  color: var(--gris);
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   DESCUBRE / PRACTICA Y REFUERZA
+========================================================= */
+
+.areas-tema {
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.area-tema {
+  padding: 24px;
+
+  border: 1px solid rgba(6, 43, 87, 0.14);
+  border-radius: var(--radio);
+
+  background: white;
+  box-shadow: var(--sombra);
+}
+
+.area-cabecera {
+  margin-bottom: 20px;
+
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.area-icono {
+  font-size: 1.7rem;
+}
+
+.area-cabecera h3 {
+  margin: 2px 0 5px;
+  font-size: 1.3rem;
+}
+
+.area-cabecera p {
+  margin: 0;
+  color: var(--gris);
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   OPCIONES DEL TEMA
+========================================================= */
+
+.opciones-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opcion-tema {
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid var(--gris-claro);
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.opcion-tema:hover {
+  background: var(--amarillo-suave);
+  border-color: var(--amarillo);
+}
+
+.opcion-icono {
+  font-size: 1.45rem;
+}
+
+.opcion-tema small {
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.opcion-tema h4 {
+  margin: 2px 0 3px;
+  font-size: 0.98rem;
+}
+
+.opcion-tema p {
+  margin: 0;
+  color: var(--gris);
+  font-size: 0.8rem;
+}
+
+.opcion-flecha {
+  font-weight: 900;
+}
+
+.incluye-solucion {
+  display: inline-block;
+  margin-top: 6px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   BACHILLERATO Y FP
+========================================================= */
+
+.tarjetas-placeholder {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tarjetas-placeholder article {
+  padding: 24px;
+
+  border: 1px solid rgba(6, 43, 87, 0.14);
+  border-radius: var(--radio);
+
+  background: white;
+  box-shadow: var(--sombra);
+}
+
+.tarjetas-placeholder article > span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.tarjetas-placeholder h3 {
+  margin-bottom: 6px;
+}
+
+.tarjetas-placeholder p {
+  margin: 0;
+  color: var(--gris);
+}
+
+.selectores-fp {
+  max-width: 800px;
+  margin: 0 auto 25px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+
+/* =========================================================
+   PIE
+========================================================= */
+
+.pie {
+  padding: 28px 6%;
+
+  background: var(--azul);
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-grafico {
+    display: none;
+  }
+
+  .tarjetas-niveles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bloques {
+    grid-template-columns: 1fr;
+  }
+
+  .fases-proyecto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .areas-tema {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetas-placeholder {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .cabecera {
+    padding: 10px 4%;
+  }
+
+  .menu-principal {
+    gap: 10px;
+  }
+
+  .menu-principal a {
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    padding: 45px 5%;
+  }
+
+  .hero h1 {
+    font-size: 3.3rem;
+  }
+
+  .configuracion {
+    grid-template-columns: 1fr;
+  }
+
+  .niveles,
+  .estructura,
+  .pagina-tema {
+    padding: 40px 4%;
+  }
+
+  .tarjetas-niveles {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-nivel {
+    min-height: auto;
+  }
+
+  .fases-proyecto {
+    grid-template-columns: 1fr;
+  }
+
+  .proyecto-desplegable {
+    padding: 16px;
+  }
+
+  .proyecto-cabecera h2 {
+    font-size: 1.05rem;
+  }
+
+  .proyecto-cabecera p {
+    font-size: 0.78rem;
+  }
+
+  .selectores-fp {
+    grid-template-columns: 1fr;
+  }
+
+  .pie {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+/* =========================================================
+   HOME · CENTRO Y CURSO
+========================================================= */
+
+.home-configuracion {
+  max-width: 620px;
+  margin: 0 0 26px;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 14px;
+}
+
+.home-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.home-campo label {
+  color: #0b3768;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.home-campo select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+
+  border: 1px solid #dce6f0;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #0b3768;
+
+  box-shadow: 0 5px 15px rgba(11, 55, 104, 0.06);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.home-campo select:focus {
+  outline: 2px solid #ffc400;
+  border-color: #ffc400;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 650px) {
+
+  .home-configuracion {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================================================
+   PÁGINA 4.º ESO · BLOQUES DESPLEGABLES
+========================================================= */
+
+#cuarto-eso {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 35px 6% 70px;
+}
+
+/* CABECERA 4 ESO */
+
+#cuarto-eso .titulo-seccion {
+  margin: 25px 0 35px;
+  padding: 30px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  background: #f7faff;
+  border: 1px solid #dce6f0;
+  border-radius: 22px;
+}
+
+#cuarto-eso .numero-seccion {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #ffc400;
+  color: #0b3768;
+
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+#cuarto-eso .titulo-seccion small {
+  color: #f0b500;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+#cuarto-eso .titulo-seccion h2 {
+  margin: 5px 0 8px;
+
+  color: #0b3768;
+
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.05;
+}
+
+#cuarto-eso .titulo-seccion p {
+  max-width: 720px;
+  margin: 0;
+
+  color: #667085;
+  line-height: 1.6;
+}
+
+
+/* CONTENEDOR DE BLOQUES */
+
+#cuarto-eso .bloques {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* CADA BLOQUE */
+
+#cuarto-eso .bloque {
+  position: relative;
+
+  padding: 22px 75px 22px 82px;
+
+  border: 1px solid #dce6f0;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 7px 22px rgba(11, 55, 104, 0.06);
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+#cuarto-eso .bloque:hover {
+  border-color: #ffc400;
+
+  box-shadow: 0 11px 28px rgba(11, 55, 104, 0.1);
+
+  transform: translateY(-2px);
+}
+
+
+/* LETRA A B C D */
+
+#cuarto-eso .letra-bloque {
+  width: 46px;
+  height: 46px;
+
+  position: absolute;
+  top: 22px;
+  left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #fff3b8;
+  color: #0b3768;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+
+/* TEXTO DEL BLOQUE */
+
+#cuarto-eso .bloque > small {
+  color: #7b8794;
+
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+#cuarto-eso .bloque > h3 {
+  margin: 4px 0 0;
+
+  color: #0b3768;
+
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+
+/* FLECHA DEL DESPLEGABLE */
+
+#cuarto-eso .bloque::after {
+  content: "⌄";
+
+  position: absolute;
+  right: 25px;
+  top: 27px;
+
+  color: #0b3768;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+
+  transition: transform 0.2s ease;
+}
+
+#cuarto-eso .bloque.abierto::after {
+  transform: rotate(180deg);
+}
+
+
+/* TEMAS OCULTOS */
+
+#cuarto-eso .bloque .temas {
+  display: none;
+
+  margin-top: 20px;
+  padding-top: 16px;
+
+  border-top: 1px solid #e5eaf0;
+}
+
+
+/* TEMAS VISIBLES AL ABRIR */
+
+#cuarto-eso .bloque.abierto .temas {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+
+/* FILA DE CADA TEMA */
+
+#cuarto-eso .tema {
+  min-height: 58px;
+  padding: 11px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  border: 1px solid #e4eaf0;
+  border-radius: 13px;
+
+  background: #f8fbff;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+#cuarto-eso .tema:hover {
+  background: #fff8d8;
+  border-color: #ffc400;
+  transform: translateX(4px);
+}
+
+
+/* NÚMERO DEL TEMA */
+
+#cuarto-eso .tema > span {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #0b3768;
+  color: #ffffff;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+
+/* NOMBRE DEL TEMA */
+
+#cuarto-eso .tema p {
+  margin: 0;
+
+  color: #0b3768;
+
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+
+/* BLOQUE ABIERTO */
+
+#cuarto-eso .bloque.abierto {
+  border-color: #ffc400;
+
+  box-shadow: 0 12px 30px rgba(11, 55, 104, 0.1);
+}
+
+#cuarto-eso .bloque.abierto .letra-bloque {
+  background: #ffc400;
+}
+
+
+/* =========================================================
+   PROYECTO EMPRENDEDOR
+========================================================= */
+
+#cuarto-eso .proyecto-transversal {
+  margin-top: 35px;
+}
+
+#cuarto-eso .proyecto-desplegable {
+  width: 100%;
+  padding: 22px 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 0;
+  border-radius: 20px;
+
+  background: #0b3768;
+  color: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 28px rgba(11, 55, 104, 0.16);
+}
+
+#cuarto-eso .proyecto-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+#cuarto-eso .proyecto-icono {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background: #ffc400;
+
+  font-size: 1.5rem;
+}
+
+#cuarto-eso .proyecto-cabecera small {
+  color: #ffc400;
+
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+#cuarto-eso .proyecto-cabecera h2 {
+  margin: 3px 0;
+
+  color: #ffffff;
+
+  font-size: 1.25rem;
+}
+
+#cuarto-eso .proyecto-cabecera p {
+  margin: 0;
+
+  color: #dce8f5;
+
+  font-size: 0.82rem;
+}
+
+#cuarto-eso .flecha-proyecto {
+  margin-left: 20px;
+
+  color: #ffc400;
+
+  font-size: 1.3rem;
+}
+
+
+/* FASES DEL PROYECTO */
+
+#cuarto-eso .contenido-proyecto {
+  display: none;
+}
+
+#cuarto-eso .proyecto-transversal.abierto .contenido-proyecto {
+  display: block;
+}
+
+#cuarto-eso .fases-proyecto {
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  border: 1px solid #dce6f0;
+  border-top: 0;
+
+  border-radius: 0 0 20px 20px;
+
+  background: #f7faff;
+}
+
+#cuarto-eso .fases-proyecto article {
+  padding: 16px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf0;
+}
+
+#cuarto-eso .fases-proyecto article > span {
+  color: #f0b500;
+
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+#cuarto-eso .fases-proyecto strong {
+  display: block;
+
+  margin: 3px 0 8px;
+
+  color: #0b3768;
+
+  font-size: 1rem;
+}
+
+#cuarto-eso .fases-proyecto p {
+  margin: 4px 0;
+
+  color: #667085;
+
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  #cuarto-eso .fases-proyecto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  #cuarto-eso {
+    padding: 25px 5% 55px;
+  }
+
+  #cuarto-eso .titulo-seccion {
+    padding: 22px;
+  }
+
+  #cuarto-eso .bloque {
+    padding: 20px 55px 20px 72px;
+  }
+
+  #cuarto-eso .letra-bloque {
+    left: 15px;
+  }
+
+  #cuarto-eso .fases-proyecto {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* ==================================================
+   SOBRE MÍ
+================================================== */
+
+.sobre-mi {
+  background: #faf9f6;
+  padding-bottom: 0;
+  color: #0b2d50;
+}
+
+.sobre-mi-cabecera {
+  text-align: center;
+  max-width: 900px;
+  margin: 45px auto 28px;
+  padding: 0 20px;
+}
+
+.sobre-mi-etiqueta {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #d99b00;
+  margin-bottom: 8px;
+}
+
+.sobre-mi-cabecera h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  color: #0b2d50;
+  line-height: 1;
+}
+
+.sobre-mi-linea {
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin: 13px auto 10px;
+  background: #f5bd22;
+  border-radius: 10px;
+}
+
+.sobre-mi-cabecera p {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #35485e;
+}
+
+
+/* GRID */
+
+.sobre-mi-grid {
+  width: min(1180px, 90%);
+  margin: 0 auto 34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+
+/* TARJETAS */
+
+.sobre-mi-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 18px;
+
+  padding: 28px;
+  border: 1px solid #d8dde3;
+  border-radius: 18px;
+
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(11, 45, 80, 0.05);
+}
+
+.sobre-mi-card-azul {
+  background: #f5f9fd;
+}
+
+.sobre-mi-card-amarillo {
+  background: #fffaf0;
+  border-color: #f0d99c;
+}
+
+
+/* ICONOS */
+
+.sobre-mi-icono {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #0b2d50;
+  color: #f5bd22;
+
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+
+/* CONTENIDO */
+
+.sobre-mi-contenido h3 {
+  margin: 2px 0 4px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  line-height: 1.1;
+
+  color: #0b2d50;
+}
+
+.sobre-mi-contenido small {
+  display: block;
+  margin-bottom: 18px;
+
+  color: #3e74ad;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.sobre-mi-contenido p {
+  margin: 0 0 12px;
+
+  color: #172c45;
+  line-height: 1.55;
+  font-size: 0.96rem;
+}
+
+.sobre-mi-contenido strong {
+  color: #0b2d50;
+}
+
+
+/* FRASE */
+
+.sobre-mi-contenido blockquote {
+  margin: 18px 0 0;
+  padding: 18px 22px;
+
+  border-left: 4px solid #f5bd22;
+  border-radius: 8px;
+
+  background: #fff5d9;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+
+  color: #173451;
+}
+
+
+/* LISTA OBJETIVOS */
+
+.sobre-mi-lista {
+  list-style: none;
+  padding: 0;
+  margin: 17px 0 0;
+}
+
+.sobre-mi-lista li {
+  margin: 8px 0;
+  color: #172c45;
+  line-height: 1.35;
+}
+
+.sobre-mi-lista li::first-letter {
+  color: #e3a900;
+}
+
+
+/* CIERRE */
+
+.sobre-mi-cierre {
+  margin-top: 20px;
+  padding: 28px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  background: #0b2d50;
+  color: white;
+}
+
+.sobre-mi-libro {
+  font-size: 3.8rem;
+  line-height: 1;
+  color: #f5bd22;
+}
+
+.sobre-mi-cierre small {
+  display: block;
+  margin-bottom: 4px;
+
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  color: #dce8f4;
+}
+
+.sobre-mi-cierre h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.sobre-mi-cierre h3 span {
+  color: #f5bd22;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 850px) {
+
+  .sobre-mi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-mi-card {
+    grid-template-columns: 65px 1fr;
+    padding: 22px;
+  }
+
+  .sobre-mi-icono {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+  }
+
+  .sobre-mi-contenido h3 {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  .sobre-mi-card {
+    display: block;
+  }
+
+  .sobre-mi-icono {
+    margin-bottom: 16px;
+  }
+
+  .sobre-mi-cierre {
+    text-align: center;
+  }
+
+  .sobre-mi-cierre h3 {
+    font-size: 1.6rem;
+  }
+
+}
+/* ==================================================
+   SOBRE MÍ · VERSIÓN DEFINITIVA
+================================================== */
+
+.portfolio-sobremi {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #faf9f6;
+  color: #0b2d50;
+}
+
+
+/* CABECERA */
+
+.portfolio-cabecera {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 38px 20px 30px;
+}
+
+.portfolio-etiqueta {
+  display: block;
+  margin-bottom: 8px;
+  color: #d99b00;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.portfolio-cabecera h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1;
+  color: #0b2d50;
+}
+
+.portfolio-linea {
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 16px auto;
+  background: #f5bd22;
+  border-radius: 10px;
+}
+
+.portfolio-cabecera p {
+  margin: 0;
+  color: #294866;
+  font-size: 1.1rem;
+}
+
+
+/* 4 TARJETAS */
+
+.portfolio-grid {
+  width: min(1200px, 90%);
+  margin: 0 auto 32px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 20px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #d9e0e7;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(11, 45, 80, 0.05);
+}
+
+.portfolio-card-azul {
+  background: #f2f7fc;
+}
+
+.portfolio-card-amarillo {
+  background: #fff9eb;
+  border-color: #efdaa4;
+}
+
+
+/* ICONOS */
+
+.portfolio-icono {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b2d50;
+  color: #f5bd22;
+  border-radius: 50%;
+  font-size: 1.9rem;
+}
+
+
+/* TEXTO */
+
+.portfolio-contenido h3 {
+  margin: 2px 0 5px;
+  color: #0b2d50;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+
+.portfolio-subtitulo {
+  display: block;
+  margin-bottom: 20px;
+  color: #3974ad;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.portfolio-contenido p {
+  margin: 0 0 14px;
+  color: #172f49;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.portfolio-contenido strong {
+  color: #0b2d50;
+  font-weight: 800;
+}
+
+
+/* FRASE DESTACADA */
+
+.portfolio-contenido blockquote {
+  margin: 18px 0 0;
+  padding: 18px 20px;
+  background: #fff3cf;
+  border: 0;
+  border-left: 4px solid #f5bd22;
+  border-radius: 8px;
+  color: #173451;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+
+/* LISTA DE OBJETIVOS */
+
+.portfolio-lista {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.portfolio-lista li {
+  position: relative;
+  margin: 8px 0;
+  padding-left: 27px;
+  color: #173451;
+  line-height: 1.4;
+}
+
+.portfolio-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5bd22;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+
+/* FRANJA FINAL */
+
+.portfolio-cierre {
+  width: 100%;
+  margin-top: 10px;
+  padding: 28px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background: #0b2d50;
+  color: white;
+}
+
+.portfolio-cierre-icono {
+  font-size: 2.8rem;
+}
+
+.portfolio-cierre span {
+  display: block;
+  margin-bottom: 3px;
+  color: #dbe7f2;
+  font-size: 0.76rem;
+  letter-spacing: 2px;
+}
+
+.portfolio-cierre h3 {
+  margin: 0;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.portfolio-cierre h3 strong {
+  color: #f5bd22;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .portfolio-cabecera {
+    padding: 28px 18px 24px;
+  }
+
+  .portfolio-card {
+    display: block;
+    padding: 22px;
+  }
+
+  .portfolio-icono {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+  }
+
+  .portfolio-contenido h3 {
+    font-size: 1.55rem;
+  }
+
+  .portfolio-cierre {
+    padding: 24px 18px;
+  }
+
+  .portfolio-cierre h3 {
+    font-size: 1.55rem;
+  }
+}
+/* ==================================================
+   SOBRE MÍ · AJUSTE COMPACTO
+================================================== */
+
+.portfolio-sobremi {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #faf9f6 !important;
+}
+
+/* CABECERA MÁS COMPACTA */
+
+.portfolio-cabecera {
+  max-width: 900px;
+  margin: 0 auto !important;
+  padding: 20px 20px 18px !important;
+}
+
+.portfolio-etiqueta {
+  margin-bottom: 4px;
+  font-size: 0.7rem;
+}
+
+.portfolio-cabecera h2 {
+  font-size: 2.8rem !important;
+}
+
+.portfolio-linea {
+  width: 48px;
+  height: 3px;
+  margin: 10px auto;
+}
+
+.portfolio-cabecera p {
+  font-size: 0.95rem;
+}
+
+
+/* TARJETAS MÁS PEQUEÑAS */
+
+.portfolio-grid {
+  width: min(1100px, 92%) !important;
+  margin: 0 auto 18px !important;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px !important;
+}
+
+.portfolio-card {
+  grid-template-columns: 58px minmax(0, 1fr) !important;
+  gap: 15px !important;
+
+  padding: 20px !important;
+  border-radius: 16px !important;
+}
+
+.portfolio-icono {
+  width: 52px !important;
+  height: 52px !important;
+  font-size: 1.35rem !important;
+}
+
+.portfolio-contenido h3 {
+  margin: 0 0 3px !important;
+  font-size: 1.45rem !important;
+}
+
+.portfolio-subtitulo {
+  margin-bottom: 12px !important;
+  font-size: 0.68rem !important;
+}
+
+.portfolio-contenido p {
+  margin-bottom: 9px !important;
+  font-size: 0.86rem !important;
+  line-height: 1.4 !important;
+}
+
+.portfolio-contenido blockquote {
+  margin-top: 10px !important;
+  padding: 11px 14px !important;
+  font-size: 0.88rem !important;
+  line-height: 1.4 !important;
+}
+
+.portfolio-lista {
+  margin-top: 10px !important;
+}
+
+.portfolio-lista li {
+  margin: 4px 0 !important;
+  font-size: 0.82rem !important;
+  line-height: 1.3 !important;
+}
+
+
+/* FRANJA FINAL MÁS PEQUEÑA */
+
+.portfolio-cierre {
+  margin: 0 !important;
+  padding: 16px 20px !important;
+}
+
+.portfolio-cierre-icono {
+  font-size: 2rem !important;
+}
+
+.portfolio-cierre h3 {
+  font-size: 1.4rem !important;
+}
+/* ==================================================
+   SOBRE MÍ · 4 TARJETAS VISIBLES
+================================================== */
+
+.portfolio-cabecera {
+  padding: 14px 20px 14px !important;
+}
+
+.portfolio-cabecera h2 {
+  font-size: 2.5rem !important;
+}
+
+.portfolio-cabecera p {
+  font-size: 0.9rem !important;
+}
+
+.portfolio-linea {
+  margin: 8px auto !important;
+}
+
+
+/* GRID MÁS ANCHO Y COMPACTO */
+
+.portfolio-grid {
+  width: min(1400px, 94%) !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+  margin: 0 auto 12px !important;
+}
+
+
+/* TARJETAS */
+
+.portfolio-card {
+  grid-template-columns: 48px 1fr !important;
+  gap: 13px !important;
+
+  padding: 15px 18px !important;
+  min-height: 0 !important;
+}
+
+
+/* ICONOS */
+
+.portfolio-icono {
+  width: 44px !important;
+  height: 44px !important;
+  font-size: 1.15rem !important;
+}
+
+
+/* TÍTULOS */
+
+.portfolio-contenido h3 {
+  font-size: 1.3rem !important;
+  margin: 0 0 2px !important;
+}
+
+.portfolio-subtitulo {
+  font-size: 0.62rem !important;
+  margin-bottom: 8px !important;
+}
+
+
+/* TEXTO */
+
+.portfolio-contenido p {
+  font-size: 0.78rem !important;
+  line-height: 1.32 !important;
+  margin: 0 0 6px !important;
+}
+
+
+/* FRASE */
+
+.portfolio-contenido blockquote {
+  margin: 7px 0 0 !important;
+  padding: 8px 11px !important;
+
+  font-size: 0.76rem !important;
+  line-height: 1.3 !important;
+}
+
+
+/* LISTA */
+
+.portfolio-lista {
+  margin-top: 6px !important;
+}
+
+.portfolio-lista li {
+  margin: 2px 0 !important;
+  padding-left: 22px !important;
+
+  font-size: 0.74rem !important;
+  line-height: 1.25 !important;
+}
+
+.portfolio-lista li::before {
+  width: 16px !important;
+  height: 16px !important;
+  font-size: 0.6rem !important;
+}
+
+
+/* CIERRE */
+
+.portfolio-cierre {
+  padding: 10px 20px !important;
+}
+
+.portfolio-cierre-icono {
+  font-size: 1.5rem !important;
+}
+
+.portfolio-cierre h3 {
+  font-size: 1.2rem !important;
+}
+
+/* ==================================================
+   SOBRE MÍ · AJUSTE FINAL DE ALTURA
+================================================== */
+
+.portfolio-cabecera {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.portfolio-etiqueta {
+  margin-bottom: 2px !important;
+}
+
+.portfolio-cabecera h2 {
+  margin: 0 !important;
+  line-height: 1.05 !important;
+}
+
+.portfolio-linea {
+  margin: 5px auto !important;
+}
+
+.portfolio-cabecera p {
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.portfolio-grid {
+  margin-top: 6px !important;
+  gap: 10px !important;
+}
+
+/* =====================================================
+   INSPÍRATE
+===================================================== */
+
+.inspirate {
+  max-width: 1500px;
+  margin: 70px auto;
+  padding: 0 28px;
+  color: #0b3768;
+}
+
+/* CABECERA AMARILLA */
+
+.inspirate-cabecera {
+  background: #ffd84d;
+  border-radius: 24px;
+  padding: 42px 50px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.inspirate-etiqueta {
+  display: inline-block;
+  background: #ffffff;
+  color: #0b3768;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 7px 16px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.inspirate-cabecera h2 {
+  margin: 5px 0;
+  font-size: 52px;
+  line-height: 1;
+  color: #0b3768;
+}
+
+.inspirate-cabecera h3 {
+  margin: 16px 0 8px;
+  font-size: 23px;
+  color: #0b3768;
+}
+
+.inspirate-cabecera p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #173f68;
+}
+
+/* GRID DE TARJETAS */
+
+.inspirate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+/* TARJETAS */
+
+.inspirate-card {
+  background: #ffffff;
+  border: 1px solid #e1e7ed;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(11, 55, 104, 0.08);
+}
+
+.inspirate-card summary {
+  min-height: 82px;
+  padding: 18px;
+  cursor: pointer;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+
+  font-weight: 800;
+  color: #0b3768;
+}
+
+.inspirate-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.inspirate-icono {
+  font-size: 28px;
+}
+
+.inspirate-categoria {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.inspirate-flecha {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+
+.inspirate-card[open] .inspirate-flecha {
+  transform: rotate(180deg);
+}
+
+/* COLORES */
+
+.inspirate-card.economia summary {
+  background: #cdeaff;
+}
+
+.inspirate-card.empresa summary {
+  background: #cef4dc;
+}
+
+.inspirate-card.convivencia summary {
+  background: #ffd9c8;
+}
+
+.inspirate-card.redes summary {
+  background: #e5d8ff;
+}
+
+.inspirate-card.cultura summary {
+  background: #ffd4ec;
+}
+
+.inspirate-card.pensar summary {
+  background: #ffe98e;
+}
+
+/* CONTENIDO INTERIOR */
+
+.inspirate-card-contenido {
+  padding: 18px;
+}
+
+.inspirate-portada {
+  height: 150px;
+  border-radius: 14px;
+  background: #f0f4f7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+.inspirate-portada span {
+  font-size: 45px;
+}
+
+.inspirate-portada small {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #657789;
+}
+
+.inspirate-card-contenido h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #0b3768;
+}
+
+/* ETIQUETAS */
+
+.inspirate-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.inspirate-tags span {
+  background: #e5f3ff;
+  color: #0b3768;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.inspirate-card-contenido p {
+  line-height: 1.55;
+  color: #42566b;
+}
+
+/* BOTÓN RTVE */
+
+.inspirate-boton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 18px;
+
+  background: #ffd23f;
+  color: #0b3768;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 800;
+
+  transition: transform 0.2s ease;
+}
+
+.inspirate-boton:hover {
+  transform: translateY(-2px);
+}
+
+.inspirate-pendiente {
+  background: #edf0f2;
+  color: #778491;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .inspirate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* MÓVIL */
+
+@media (max-width: 650px) {
+
+  .inspirate {
+    padding: 0 16px;
+  }
+
+  .inspirate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inspirate-cabecera {
+    padding: 32px 20px;
+  }
+
+  .inspirate-cabecera h2 {
+    font-size: 40px;
+  }
+
+}
+
+/* =========================================================
+   VERSIÓN FINAL · EL AULA DE ECONOMÍA
+   Negro + blanco + amarillo
+========================================================= */
+
+:root {
+  --negro-aula: #171717;
+  --amarillo-aula: #f7b900;
+}
+
+/* CABECERA NEGRA */
+
+.cabecera {
+  background: var(--negro-aula);
+  color: #ffffff;
+  border-bottom: 3px solid var(--amarillo-aula);
+}
+
+.logo strong {
+  color: #ffffff;
+}
+
+.menu-principal a {
+  color: #ffffff;
+}
+
+.menu-principal a:hover {
+  color: var(--amarillo-aula);
+}
+
+
+/* HOME */
+
+.home-nueva {
+  background: #ffffff;
+  color: #171717;
+}
+
+.home-texto h1 {
+  color: #171717;
+}
+
+.home-texto h1 span {
+  color: var(--amarillo-aula);
+}
+
+.home-texto h2 {
+  color: #252525;
+}
+
+.home-etiqueta {
+  background: #fff4c7;
+  color: #292929;
+}
+
+.home-boton {
+  background: var(--amarillo-aula);
+  color: #111111;
+  border-radius: 7px;
+}
+
+.home-boton:hover {
+  background: #ffc400;
+}
+
+
+/* TARJETAS DE LA HOME */
+
+.home-acceso {
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 5px 18px rgba(0,0,0,.06);
+}
+
+.home-acceso:hover {
+  border-color: var(--amarillo-aula);
+}
+
+.home-acceso h3,
+.home-flecha {
+  color: #171717;
+}
+
+.home-acceso-icono {
+  background: #fff3c4;
+}
+
+
+/* FOTO PRINCIPAL DE LA HOME */
+
+.home-foto {
+  min-height: 350px;
+  max-width: 520px;
+  padding: 0;
+
+  background-image: url("alumnos-economia.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border: none;
+  border-radius: 6px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.13);
+}
+
+.home-foto::before,
+.home-foto::after,
+.home-foto-iconos,
+.home-mensaje {
+  display: none;
+}
+
+
+/* =========================================================
+   TEMA 1 · LA ACTIVIDAD ECONÓMICA
+========================================================= */
+
+#tema-1 {
+  background: #fafafa;
+}
+
+#tema-1 .cabecera-tema {
+  max-width: 1200px;
+  margin: 0 auto 35px;
+}
+
+#tema-1 .cabecera-tema small {
+  color: #777;
+}
+
+#tema-1 .cabecera-tema h2 {
+  margin: 5px 0 8px;
+  color: #171717;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+#tema-1 .cabecera-tema h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 4px;
+  margin-top: 12px;
+  background: var(--amarillo-aula);
+}
+
+#tema-1 .cabecera-tema p {
+  max-width: 760px;
+  color: #606060;
+}
+
+
+/* TARJETAS DE RECURSOS */
+
+.recursos-tema1 {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.recurso-tema1 {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+
+  box-shadow: 0 7px 20px rgba(0,0,0,.06);
+}
+
+.recurso-imagen {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #222222;
+  color: var(--amarillo-aula);
+
+  font-size: 2.4rem;
+}
+
+.recurso-contenido {
+  padding: 22px;
+}
+
+.recurso-contenido small {
+  color: #777777;
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.recurso-contenido h3 {
+  margin: 5px 0 10px;
+  color: #171717;
+  font-size: 1.45rem;
+}
+
+.recurso-contenido p {
+  color: #555555;
+}
+
+
+/* BOTÓN PDF */
+
+.boton-recurso {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding: 11px 17px;
+
+  background: var(--amarillo-aula);
+  color: #111111;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.boton-recurso:hover {
+  background: #ffc400;
+}
+
+
+/* VÍDEO */
+
+.video-tema1 {
+  width: 100%;
+  margin-top: 12px;
+
+  border-radius: 6px;
+  background: #111111;
+}
+
+
+/* ACTIVIDADES */
+
+.actividad-tema {
+  margin-top: 17px;
+  padding: 18px;
+
+  background: #f7f7f7;
+
+  border-left: 4px solid var(--amarillo-aula);
+}
+
+.actividad-tema > strong {
+  color: #171717;
+}
+
+.actividad-tema p {
+  margin: 9px 0;
+}
+
+
+/* EJERCICIO CORREGIDO */
+
+.solucion-tema {
+  margin-top: 15px;
+
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+
+  background: #ffffff;
+}
+
+.solucion-tema summary {
+  padding: 13px 15px;
+
+  background: var(--amarillo-aula);
+  color: #111111;
+
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.solucion-tema div {
+  padding: 15px;
+}
+
+
+/* ECONOMÍA EN TU VIDA */
+
+.recurso-vida {
+  grid-column: 1 / -1;
+}
+
+.recurso-vida .recurso-imagen {
+  min-height: 80px;
+}
+
+.reflexion-final {
+  margin-top: 18px;
+  padding: 15px;
+
+  background: #222222;
+  color: #ffffff;
+}
+
+.reflexion-final p {
+  margin: 4px 0 0;
+  color: #ffffff;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 800px) {
+
+  .recursos-tema1 {
+    grid-template-columns: 1fr;
+  }
+
+  .recurso-vida {
+    grid-column: auto;
+  }
+
+  .home-foto {
+    min-height: 300px;
+  }
+}
