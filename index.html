@@ -4,540 +4,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>El Aula de Economía · de Beatriz</title>
-
-  <link rel="stylesheet" href="./style.css">
+  <title>El Aula de Economía · Beatriz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<!-- =====================================================
+<!-- =========================================================
      CABECERA
-===================================================== -->
+========================================================= -->
 
 <header class="cabecera">
 
-  <div class="logo">
-
-    <span class="logo-icono">🌱</span>
-
-    <div>
-      <strong>EL AULA DE ECONOMÍA</strong>
-      <span>de Beatriz</span>
-    </div>
-
-  </div>
-
+  <a href="#inicio" class="marca" data-ir="inicio">
+    EL AULA DE <span>ECONOMÍA</span>
+  </a>
 
   <nav class="menu-principal">
-
-    <a href="#inicio">Inicio</a>
-    <a href="#niveles">Mi aula</a>
-    <a href="#proyecto">Proyecto</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#inspirate">Inspírate</a>
-
+    <a href="#inicio">INICIO</a>
+    <a href="#niveles">MI AULA</a>
+    <a href="#cuarto-eso">4.º ESO</a>
+    <a href="#proyecto">PROYECTO</a>
+    <a href="#sobre-mi">SOBRE MÍ</a>
+    <a href="#inspirate">INSPÍRATE</a>
   </nav>
 
 </header>
 
 
-
 <main>
 
+<!-- =========================================================
+     01 · HOME
+========================================================= -->
 
-<!-- =====================================================
-     1 · INICIO
-===================================================== -->
-
-<section class="home-nueva" id="inicio">
+<section id="inicio" class="home">
 
   <div class="home-hero">
 
-
     <div class="home-texto">
 
-      <span class="home-etiqueta">
-        ECONOMÍA PARA LA VIDA REAL
-      </span>
+      <div class="linea-amarilla"></div>
+
+      <span class="eyebrow">ECONOMÍA PARA LA VIDA REAL</span>
 
       <h1>
         EL AULA DE<br>
         <span>ECONOMÍA</span>
       </h1>
 
-      <p class="home-autor">
-        de Beatriz
+      <p class="home-autor">de Beatriz</p>
+
+      <h2>Entender para decidir.</h2>
+
+      <p class="home-intro">
+        Un espacio para aprender Economía, Empresa y Emprendimiento
+        de forma clara, visual y conectada con la realidad.
       </p>
 
-      <h2>
-        Entender para decidir.
-      </h2>
-
-      <p class="home-descripcion">
-        Economía · Empresa · Emprendimiento
-      </p>
-
-
-      <div class="home-configuracion">
-
-        <div class="home-campo">
-
-          <label for="centro">
-            🏫 Centro educativo
-          </label>
-
-          <select id="centro">
-
-            <option value="">
-              Selecciona tu centro
-            </option>
-
-            <option>IES Enrique Tierno Galván</option>
-            <option>IES Nicolás Copérnico</option>
-            <option>IES La Laguna</option>
-            <option>IES Humanejos</option>
-            <option>IES El Olivo</option>
-            <option>IES Las Américas</option>
-            <option>Otro centro</option>
-
-          </select>
-
-        </div>
-
-
-        <div class="home-campo">
-
-          <label for="curso">
-            📅 Curso académico
-          </label>
-
-          <select id="curso">
-
-            <option>2026–2027</option>
-            <option>2027–2028</option>
-
-          </select>
-
-        </div>
-
-      </div>
-
-
-      <button class="home-boton" data-ir="niveles">
-        EMPIEZA AQUÍ →
+      <button class="btn-amarillo" data-ir="niveles">
+        ENTRA EN MI AULA →
       </button>
 
     </div>
 
 
+    <div class="home-imagen">
 
-    <div class="home-visual">
-
-      <div class="home-foto">
-
-        <div class="home-foto-iconos">
-          <span>📊</span>
-          <span>💡</span>
-          <span>🚀</span>
-        </div>
-
-        <div class="home-mensaje">
-
-          <strong>
-            Aprender economía
-          </strong>
-
-          <span>
-            para entender el mundo.
-          </span>
-
-        </div>
-
+      <div class="home-frase">
+        <strong>APRENDER ECONOMÍA</strong>
+        <span>para entender el mundo.</span>
       </div>
 
     </div>
 
   </div>
-
 
 
   <div class="home-accesos">
 
-
-    <article class="home-acceso" data-destino="cuarto-eso">
-
-      <div class="home-acceso-icono">
-        🎓
-      </div>
-
-      <div>
-
-        <small>SECUNDARIA</small>
-
-        <h3>4.º ESO</h3>
-
-        <p>Economía y Emprendimiento</p>
-
-      </div>
-
-      <span class="home-flecha">→</span>
-
+    <article data-destino="cuarto-eso">
+      <span>01</span>
+      <small>SECUNDARIA</small>
+      <h3>4.º ESO</h3>
+      <p>Economía y Emprendimiento</p>
+      <b>→</b>
     </article>
 
-
-
-    <article class="home-acceso" data-destino="primero-bach">
-
-      <div class="home-acceso-icono">
-        📘
-      </div>
-
-      <div>
-
-        <small>BACHILLERATO</small>
-
-        <h3>1.º BACH</h3>
-
-        <p>Economía</p>
-
-      </div>
-
-      <span class="home-flecha">→</span>
-
+    <article data-destino="primero-bach">
+      <span>02</span>
+      <small>BACHILLERATO</small>
+      <h3>1.º BACH</h3>
+      <p>Economía</p>
+      <b>→</b>
     </article>
 
-
-
-    <article class="home-acceso" data-destino="segundo-bach">
-
-      <div class="home-acceso-icono">
-        📊
-      </div>
-
-      <div>
-
-        <small>BACHILLERATO</small>
-
-        <h3>2.º BACH</h3>
-
-        <p>Empresa y modelos de negocio</p>
-
-      </div>
-
-      <span class="home-flecha">→</span>
-
+    <article data-destino="segundo-bach">
+      <span>03</span>
+      <small>BACHILLERATO</small>
+      <h3>2.º BACH</h3>
+      <p>Empresa y Diseño de Modelos de Negocio</p>
+      <b>→</b>
     </article>
 
-
-
-    <article class="home-acceso" data-destino="fp">
-
-      <div class="home-acceso-icono">
-        🛠️
-      </div>
-
-      <div>
-
-        <small>FORMACIÓN PROFESIONAL</small>
-
-        <h3>FP</h3>
-
-        <p>Empresa · Emprendimiento</p>
-
-      </div>
-
-      <span class="home-flecha">→</span>
-
+    <article data-destino="fp">
+      <span>04</span>
+      <small>FORMACIÓN PROFESIONAL</small>
+      <h3>FP</h3>
+      <p>Empresa · Emprendimiento · Empleabilidad</p>
+      <b>→</b>
     </article>
 
   </div>
 
 
-
-  <div class="home-filosofia">
-
-    <span>💡</span>
-
+  <div class="frase-destacada">
+    <span>“</span>
     <p>
-
-      <strong>
-        Aprender economía es aprender a decidir.
-      </strong>
-
-      Comprende, analiza y aplica lo aprendido
-      a situaciones reales.
-
+      La economía no solo explica el mundo,
+      también nos ayuda a tomar mejores decisiones.
     </p>
-
   </div>
 
 </section>
 
 
+<!-- =========================================================
+     02 · MI AULA
+========================================================= -->
 
-<!-- =====================================================
-     2 · MI AULA
-===================================================== -->
+<section id="niveles" class="pantalla mi-aula">
 
-<section class="niveles" id="niveles">
-
-  <div class="mi-aula-cabecera">
-
-    <span class="mi-aula-etiqueta">
-      MI AULA
-    </span>
-
-    <h2>
-      ¿Dónde aprendemos hoy?
-    </h2>
-
-    <p>
-      Elige tu nivel y accede a todos los contenidos,
-      actividades y recursos.
-    </p>
-
-  </div>
-
-
-
-  <div class="tarjetas-niveles">
-
-
-    <article class="tarjeta-nivel eso" data-destino="cuarto-eso">
-
-      <div class="nivel-icono">
-        🎓
-      </div>
-
-      <small>SECUNDARIA</small>
-
-      <h3>4.º ESO</h3>
-
-      <p>
-        Economía y Emprendimiento
-      </p>
-
-      <span class="flecha">→</span>
-
-    </article>
-
-
-
-    <article class="tarjeta-nivel bach1" data-destino="primero-bach">
-
-      <div class="nivel-icono">
-        📘
-      </div>
-
-      <small>BACHILLERATO</small>
-
-      <h3>1.º BACH</h3>
-
-      <p>Economía</p>
-
-      <span class="flecha">→</span>
-
-    </article>
-
-
-
-    <article class="tarjeta-nivel bach2" data-destino="segundo-bach">
-
-      <div class="nivel-icono">
-        📊
-      </div>
-
-      <small>BACHILLERATO</small>
-
-      <h3>2.º BACH</h3>
-
-      <p>
-        Empresa y Diseño de Modelos de Negocio
-      </p>
-
-      <span class="flecha">→</span>
-
-    </article>
-
-
-
-    <article class="tarjeta-nivel fp" data-destino="fp">
-
-      <div class="nivel-icono">
-        🛠️
-      </div>
-
-      <small>FORMACIÓN PROFESIONAL</small>
-
-      <h3>FP</h3>
-
-      <p>
-        Empresa · Emprendimiento · Empleabilidad
-      </p>
-
-      <span class="flecha">→</span>
-
-    </article>
-
-  </div>
-
-
-
-  <div class="mi-aula-mensaje">
-
-    <span>💡</span>
+  <div class="hero-interior hero-aula">
 
     <div>
-
-      <strong>
-        Aprende a tu ritmo.
-      </strong>
-
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">MI AULA</span>
+      <h1>¿DÓNDE APRENDEMOS HOY?</h1>
       <p>
-        Comprende los conceptos, practica y descubre
-        cómo la economía forma parte de tu día a día.
+        Elige tu nivel y accede a contenidos,
+        actividades, proyectos y recursos.
       </p>
-
     </div>
 
   </div>
 
+
+  <div class="niveles-grid">
+
+    <article data-destino="cuarto-eso">
+      <span class="numero">01</span>
+      <small>SECUNDARIA</small>
+      <h2>4.º ESO</h2>
+      <p>Economía y Emprendimiento</p>
+      <button>ENTRAR →</button>
+    </article>
+
+    <article data-destino="primero-bach">
+      <span class="numero">02</span>
+      <small>BACHILLERATO</small>
+      <h2>1.º BACH</h2>
+      <p>Economía</p>
+      <button>ENTRAR →</button>
+    </article>
+
+    <article data-destino="segundo-bach">
+      <span class="numero">03</span>
+      <small>BACHILLERATO</small>
+      <h2>2.º BACH</h2>
+      <p>Empresa y Diseño de Modelos de Negocio</p>
+      <button>ENTRAR →</button>
+    </article>
+
+    <article data-destino="fp">
+      <span class="numero">04</span>
+      <small>FORMACIÓN PROFESIONAL</small>
+      <h2>FP</h2>
+      <p>Empresa · Emprendimiento · Empleabilidad</p>
+      <button>ENTRAR →</button>
+    </article>
+
+  </div>
+
 </section>
 
 
+<!-- =========================================================
+     03 · 4.º ESO
+========================================================= -->
 
-<!-- =====================================================
-     3 · 4.º ESO
-===================================================== -->
+<section id="cuarto-eso" class="pantalla curso">
 
-<section class="estructura pantalla" id="cuarto-eso">
-
-  <nav class="navegacion-pagina">
-
-    <button class="nav-anterior" data-ir="inicio">
-      ← Anterior
-    </button>
-
-    <button class="btn-home" aria-label="Ir a inicio">
-      🏠
-    </button>
-
-    <button class="nav-siguiente" data-ir="bloque-a">
-      Siguiente →
-    </button>
-
-  </nav>
-
-
-
-  <div class="titulo-seccion">
-
-    <span class="numero-seccion">
-      02
-    </span>
+  <div class="hero-interior hero-eso">
 
     <div>
-
-      <small>4.º ESO</small>
-
-      <h2>
-        Economía y Emprendimiento
-      </h2>
-
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">4.º ESO</span>
+      <h1>ECONOMÍA Y EMPRENDIMIENTO</h1>
       <p>
         Aprende economía conectándola con tu vida
         y construyendo tu propio proyecto emprendedor.
       </p>
-
     </div>
 
   </div>
 
 
+  <div class="bloques-curso">
 
-  <div class="bloques">
+    <article class="bloque">
 
+      <div class="bloque-numero">A</div>
 
-    <!-- BLOQUE A -->
+      <div>
+        <small>BLOQUE A</small>
+        <h2>Principios básicos de economía</h2>
 
-    <article class="bloque" id="bloque-a">
+        <div class="lista-temas">
 
-      <span class="letra-bloque">A</span>
+          <button data-tema="tema-1">
+            <span>01</span>
+            La actividad económica
+            <b>→</b>
+          </button>
 
-      <small>BLOQUE A</small>
+          <button data-tema="tema-2">
+            <span>02</span>
+            Los agentes económicos
+            <b>→</b>
+          </button>
 
-      <h3>
-        Principios básicos de economía
-      </h3>
+          <button data-tema="tema-3">
+            <span>03</span>
+            Los sistemas económicos
+            <b>→</b>
+          </button>
 
-      <div class="temas">
-
-        <div class="tema" data-tema="tema-1">
-          <span>01</span>
-          <p>La actividad económica</p>
-        </div>
-
-        <div class="tema" data-tema="tema-2">
-          <span>02</span>
-          <p>Los agentes económicos</p>
-        </div>
-
-        <div class="tema" data-tema="tema-3">
-          <span>03</span>
-          <p>Los sistemas económicos</p>
-        </div>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- BLOQUE B -->
-
-    <article class="bloque" id="bloque-b">
-
-      <span class="letra-bloque">B</span>
-
-      <small>BLOQUE B</small>
-
-      <h3>
-        El entorno como fuente de ideas y oportunidades
-      </h3>
-
-      <div class="temas">
-
-        <div class="tema">
-          <span>04</span>
-          <p>Economía: elegir es renunciar</p>
-        </div>
-
-        <div class="tema">
-          <span>05</span>
-          <p>¿Cómo funciona la economía?</p>
-        </div>
-
-        <div class="tema">
-          <span>06</span>
-          <p>Mercados y oportunidades</p>
-        </div>
-
-        <div class="tema">
-          <span>07</span>
-          <p>Dinero y sistema financiero</p>
-        </div>
-
-        <div class="tema">
-          <span>08</span>
-          <p>Empresa y sostenibilidad</p>
-        </div>
-
-        <div class="tema">
-          <span>09</span>
-          <p>Investigar antes de emprender</p>
         </div>
 
       </div>
@@ -545,39 +247,21 @@
     </article>
 
 
+    <article class="bloque">
 
-    <!-- BLOQUE C -->
+      <div class="bloque-numero">B</div>
 
-    <article class="bloque" id="bloque-c">
+      <div>
+        <small>BLOQUE B</small>
+        <h2>El entorno como fuente de ideas y oportunidades</h2>
 
-      <span class="letra-bloque">C</span>
-
-      <small>BLOQUE C</small>
-
-      <h3>
-        Recursos para llevar a cabo un proyecto emprendedor
-      </h3>
-
-      <div class="temas">
-
-        <div class="tema">
-          <span>10</span>
-          <p>Construimos nuestra empresa</p>
-        </div>
-
-        <div class="tema">
-          <span>11</span>
-          <p>Equipos que funcionan</p>
-        </div>
-
-        <div class="tema">
-          <span>12</span>
-          <p>Que salgan las cuentas</p>
-        </div>
-
-        <div class="tema">
-          <span>13</span>
-          <p>¿De dónde saco el dinero?</p>
+        <div class="lista-simple">
+          <span>04 · Economía: elegir es renunciar</span>
+          <span>05 · ¿Cómo funciona la economía?</span>
+          <span>06 · Mercados y oportunidades</span>
+          <span>07 · Dinero y sistema financiero</span>
+          <span>08 · Empresa y sostenibilidad</span>
+          <span>09 · Investigar antes de emprender</span>
         </div>
 
       </div>
@@ -585,39 +269,39 @@
     </article>
 
 
+    <article class="bloque">
 
-    <!-- BLOQUE D -->
+      <div class="bloque-numero">C</div>
 
-    <article class="bloque" id="bloque-d">
+      <div>
+        <small>BLOQUE C</small>
+        <h2>Recursos para llevar a cabo un proyecto emprendedor</h2>
 
-      <span class="letra-bloque">D</span>
-
-      <small>BLOQUE D</small>
-
-      <h3>
-        La realización del proyecto emprendedor
-      </h3>
-
-      <div class="temas">
-
-        <div class="tema">
-          <span>14</span>
-          <p>Del reto al proyecto</p>
+        <div class="lista-simple">
+          <span>10 · Construimos nuestra empresa</span>
+          <span>11 · Equipos que funcionan</span>
+          <span>12 · Que salgan las cuentas</span>
+          <span>13 · ¿De dónde saco el dinero?</span>
         </div>
 
-        <div class="tema">
-          <span>15</span>
-          <p>Creamos el prototipo</p>
-        </div>
+      </div>
 
-        <div class="tema">
-          <span>16</span>
-          <p>Probamos y mejoramos</p>
-        </div>
+    </article>
 
-        <div class="tema">
-          <span>17</span>
-          <p>Presentamos nuestra empresa</p>
+
+    <article class="bloque">
+
+      <div class="bloque-numero">D</div>
+
+      <div>
+        <small>BLOQUE D</small>
+        <h2>La realización del proyecto emprendedor</h2>
+
+        <div class="lista-simple">
+          <span>14 · Del reto al proyecto</span>
+          <span>15 · Creamos el prototipo</span>
+          <span>16 · Probamos y mejoramos</span>
+          <span>17 · Presentamos nuestra empresa</span>
         </div>
 
       </div>
@@ -629,1703 +313,1657 @@
 </section>
 
 
+<!-- =========================================================
+     04 · TEMA 1
+========================================================= -->
 
-<!-- =====================================================
-     TEMA 1 · LA ACTIVIDAD ECONÓMICA
-===================================================== -->
+<section id="tema-1" class="pantalla tema">
 
-<section class="pagina-tema pantalla" id="tema-1">
+  <div class="tema-hero">
 
-  <nav class="navegacion-pagina">
+    <div class="tema-hero-texto">
 
-    <button class="nav-anterior" data-ir="cuarto-eso">
-      ← 4.º ESO
-    </button>
+      <span class="ruta">4.º ESO / BLOQUE A / TEMA 1</span>
 
-    <button class="btn-home" aria-label="Ir a inicio">
-      🏠
-    </button>
+      <div class="linea-amarilla"></div>
 
-    <button class="nav-siguiente" data-ir="tema-2">
-      Tema 2 →
-    </button>
+      <span class="tema-numero">TEMA <b>1</b></span>
 
-  </nav>
+      <h1>LA ACTIVIDAD ECONÓMICA</h1>
+
+      <p>
+        Comprender cómo tomamos decisiones cuando los recursos
+        son limitados y por qué la economía está presente
+        en nuestra vida diaria.
+      </p>
+
+    </div>
 
 
-  <div class="cabecera-tema">
+    <div class="tema-hero-visual">
 
-    <small>
-      BLOQUE A · TEMA 01
-    </small>
+      <div class="decision decision-1">
+        ZAPATILLAS
+      </div>
 
-    <h2>
-      La actividad económica
-    </h2>
+      <strong>O</strong>
 
-    <p>
-      Descubre cómo las personas administramos recursos limitados
-      para satisfacer nuestras necesidades y por qué elegir forma
-      parte de cualquier decisión económica.
-    </p>
+      <div class="decision decision-2">
+        ENTRADA<br>CONCIERTO
+      </div>
+
+      <span class="nota-amarilla">
+        ELEGIR TAMBIÉN<br>ES RENUNCIAR
+      </span>
+
+    </div>
 
   </div>
 
 
+  <!-- APRENDE -->
 
-  <div class="recursos-tema1">
+  <section class="zona-contenido">
 
+    <header class="titulo-zona">
 
-    <!-- APUNTES -->
+      <span>01</span>
 
-    <article class="recurso-tema1">
-
-      <div class="recurso-imagen recurso-apuntes">
-        <span>📚</span>
+      <div>
+        <h2>APRENDE</h2>
+        <p>Primero comprende los conceptos.</p>
       </div>
 
-      <div class="recurso-contenido">
-
-        <small>CONTENIDO</small>
-
-        <h3>Apuntes</h3>
-
-        <p>
-          Tema 1 · La actividad económica en formato PDF.
-          Necesidades, recursos, escasez, bienes y servicios,
-          coste de oportunidad y factores de producción.
-        </p>
-
-        <a
-          class="boton-recurso"
-          href="tema_1_actividad_economica_4ESO.pdf"
-          target="_blank"
-          rel="noopener noreferrer">
-          📄 Ver PDF
-        </a>
-
-      </div>
-
-    </article>
+    </header>
 
 
+    <div class="aprende-grid">
 
-    <!-- VÍDEO -->
+      <article class="recurso-grande">
 
-    <article class="recurso-tema1">
+        <div class="recurso-texto">
 
-      <div class="recurso-imagen recurso-video">
-        <span>▶</span>
-      </div>
+          <span class="numero-amarillo">01</span>
 
-      <div class="recurso-contenido">
+          <small>CONTENIDO</small>
 
-        <small>MICROLEARNING</small>
-
-        <h3>Vídeo</h3>
-
-        <p>
-          Explicación visual de las principales ideas
-          del Tema 1 · La actividad económica.
-        </p>
-
-        <video class="video-tema1" controls preload="metadata">
-
-          <source
-            src="Tema_1_Actividad_Economica_voz_mas_natural.mp4"
-            type="video/mp4">
-
-          Tu navegador no puede reproducir este vídeo.
-
-        </video>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- EJERCICIOS -->
-
-    <article class="recurso-tema1">
-
-      <div class="recurso-imagen recurso-ejercicios">
-        <span>✏️</span>
-      </div>
-
-      <div class="recurso-contenido">
-
-        <small>PRACTICA</small>
-
-        <h3>Ejercicios</h3>
-
-        <p>
-          Practica los principales conceptos del tema.
-        </p>
-
-
-        <div class="actividad-tema">
-
-          <strong>Actividad</strong>
+          <h3>APUNTES DEL TEMA 1</h3>
 
           <p>
-            Marta dispone de 30 € para su tiempo de ocio.
-            Está pensando en gastarlos en una cena con sus amigos.
+            Conceptos y explicaciones para comprender
+            la actividad económica, la escasez,
+            las necesidades, los bienes, el coste de oportunidad
+            y los factores de producción.
           </p>
 
-          <p>
-            <strong>a)</strong>
-            ¿Por qué esta situación representa un problema económico?
-          </p>
-
-          <p>
-            <strong>b)</strong>
-            Explica cuál podría ser su coste de oportunidad.
-          </p>
-
-          <p>
-            <strong>c)</strong>
-            Pon otro ejemplo de una decisión económica que tomes habitualmente.
-          </p>
+          <a
+            href="tema_1_actividad_economica_4ESO.pdf"
+            target="_blank"
+            class="btn-amarillo">
+            VER APUNTES →
+          </a>
 
         </div>
 
-      </div>
 
-    </article>
+        <div class="recurso-imagen apuntes-imagen">
 
-
-
-    <!-- EJERCICIO CORREGIDO -->
-
-    <article class="recurso-tema1">
-
-      <div class="recurso-imagen recurso-corregido">
-        <span>✓</span>
-      </div>
-
-      <div class="recurso-contenido">
-
-        <small>
-          APRENDE PASO A PASO
-        </small>
-
-        <h3>
-          Ejercicio corregido
-        </h3>
-
-        <p>
-          Observa cómo se resuelve un ejercicio relacionado
-          con los factores de producción.
-        </p>
-
-
-        <div class="actividad-tema">
-
-          <strong>
-            Enunciado
-          </strong>
-
-          <p>
-            Una panadería utiliza harina, agua, un horno,
-            el local y el trabajo de dos panaderos para producir pan.
-          </p>
-
-          <p>
-            Clasifica los elementos anteriores según los
-            factores de producción.
-          </p>
-
-
-          <details class="solucion-tema">
-
-            <summary>
-              Ver solución
-            </summary>
-
-            <div>
-
-              <p>
-                <strong>Recursos naturales:</strong>
-                harina y agua.
-              </p>
-
-              <p>
-                <strong>Trabajo:</strong>
-                el esfuerzo físico e intelectual de los dos panaderos.
-              </p>
-
-              <p>
-                <strong>Capital:</strong>
-                el horno, el local, las herramientas y demás bienes
-                utilizados para producir el pan.
-              </p>
-
-              <p>
-                La producción necesita combinar distintos
-                factores productivos.
-              </p>
-
-            </div>
-
-          </details>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- ECONOMÍA EN TU VIDA -->
-
-    <article class="recurso-tema1 recurso-vida">
-
-      <div class="recurso-imagen recurso-real">
-        <span>💡</span>
-      </div>
-
-      <div class="recurso-contenido">
-
-        <small>APLICA</small>
-
-        <h3>
-          Economía en tu vida
-        </h3>
-
-        <p>
-          Aplica lo aprendido a una decisión cotidiana.
-        </p>
-
-
-        <div class="actividad-tema">
-
-          <strong>
-            ¿Qué harías con 20 €?
-          </strong>
-
-          <p>
-            Imagina que tienes 20 € disponibles para el fin de semana.
-            Puedes comprar una entrada para el cine, cenar con tus
-            amigos o guardar el dinero para comprar algo más adelante.
-          </p>
-
-          <p>
-            Solo puedes elegir una de las opciones.
-          </p>
-
-          <p>
-            <strong>1.</strong>
-            ¿Qué opción elegirías?
-          </p>
-
-          <p>
-            <strong>2.</strong>
-            ¿A qué estás renunciando?
-          </p>
-
-          <p>
-            <strong>3.</strong>
-            ¿Cuál sería tu coste de oportunidad?
-          </p>
-
-          <p>
-            <strong>4.</strong>
-            ¿Cambiaría tu decisión si tuvieras
-            50 € en lugar de 20 €? Explica por qué.
-          </p>
-
-
-          <div class="reflexion-final">
-
-            <strong>
-              Idea clave
-            </strong>
-
-            <p>
-              La economía está presente cada vez que tenemos que
-              elegir cómo utilizar unos recursos que son limitados.
-            </p>
-
+          <div class="hoja-apuntes">
+            <small>TEMA 1</small>
+            <strong>LA ACTIVIDAD<br>ECONÓMICA</strong>
+            <span>ENTENDER · ELEGIR · DECIDIR</span>
           </div>
 
         </div>
 
-      </div>
+      </article>
 
-    </article>
 
-  </div>
+      <article class="recurso-grande">
 
-</section>
+        <div class="recurso-texto">
 
+          <span class="numero-amarillo">02</span>
 
+          <small>MICROLEARNING</small>
 
-<!-- =====================================================
-     TEMA 2
-===================================================== -->
-
-<section class="pagina-tema pantalla" id="tema-2">
-
-  <nav class="navegacion-pagina">
-
-    <button class="nav-anterior" data-ir="tema-1">
-      ← Tema 1
-    </button>
-
-    <button class="btn-home">
-      🏠
-    </button>
-
-    <button class="nav-siguiente" data-ir="tema-3">
-      Tema 3 →
-    </button>
-
-  </nav>
-
-
-  <div class="cabecera-tema">
-
-    <small>
-      BLOQUE A · TEMA 02
-    </small>
-
-    <h2>
-      Los agentes económicos
-    </h2>
-
-    <p>
-      Descubre el papel de las familias, las empresas
-      y el sector público en la actividad económica.
-    </p>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TEMA 3
-===================================================== -->
-
-<section class="pagina-tema pantalla" id="tema-3">
-
-  <nav class="navegacion-pagina">
-
-    <button class="nav-anterior" data-ir="tema-2">
-      ← Tema 2
-    </button>
-
-    <button class="btn-home">
-      🏠
-    </button>
-
-    <button class="nav-siguiente" data-ir="cuarto-eso">
-      4.º ESO →
-    </button>
-
-  </nav>
-
-
-  <div class="cabecera-tema">
-
-    <small>
-      BLOQUE A · TEMA 03
-    </small>
-
-    <h2>
-      Los sistemas económicos
-    </h2>
-
-    <p>
-      Conoce las distintas formas de organizar una economía
-      y cómo cada sistema responde a las principales
-      decisiones económicas.
-    </p>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     1.º BACHILLERATO
-===================================================== -->
-
-<section class="estructura pantalla" id="primero-bach">
-
-  <nav class="navegacion-pagina">
-
-    <button class="nav-anterior" data-ir="cuarto-eso">
-      ← 4.º ESO
-    </button>
-
-    <button class="btn-home">
-      🏠
-    </button>
-
-    <button class="nav-siguiente" data-ir="segundo-bach">
-      2.º Bach →
-    </button>
-
-  </nav>
-
-
-
-  <div class="titulo-seccion">
-
-    <span class="numero-seccion">
-      03
-    </span>
-
-    <div>
-
-      <small>
-        1.º BACHILLERATO
-      </small>
-
-      <h2>
-        Economía
-      </h2>
-
-      <p>
-        Espacio preparado para desarrollar
-        progresivamente los contenidos,
-        actividades y recursos de la materia.
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="tarjetas-placeholder">
-
-    <article>
-
-      <span>📚</span>
-
-      <h3>Temario</h3>
-
-      <p>
-        Contenidos y materiales de clase.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <span>✏️</span>
-
-      <h3>
-        Actividades y retos
-      </h3>
-
-      <p>
-        Práctica y aplicación de la Economía.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     2.º BACHILLERATO
-===================================================== -->
-
-<section class="estructura pantalla" id="segundo-bach">
-
-  <nav class="navegacion-pagina">
-
-    <button class="nav-anterior" data-ir="primero-bach">
-      ← 1.º Bach
-    </button>
-
-    <button class="btn-home">
-      🏠
-    </button>
-
-    <button class="nav-siguiente" data-ir="fp">
-      FP →
-    </button>
-
-  </nav>
-
-
-
-  <div class="titulo-seccion">
-
-    <span class="numero-seccion">
-      04
-    </span>
-
-    <div>
-
-      <small>
-        2.º BACHILLERATO
-      </small>
-
-      <h2>
-        Empresa y Diseño de Modelos de Negocio
-      </h2>
-
-      <p>
-        Recursos para aprender empresa,
-        analizar casos y preparar la materia.
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="tarjetas-placeholder">
-
-    <article>
-
-      <span>📚</span>
-
-      <h3>
-        Temario
-      </h3>
-
-      <p>
-        Contenidos de la materia.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <span>🏢</span>
-
-      <h3>
-        Casos empresariales
-      </h3>
-
-      <p>
-        Aplicación a empresas y situaciones reales.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <span>🎓</span>
-
-      <h3>
-        PAU
-      </h3>
-
-      <p>
-        Preparación progresiva de la prueba.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FORMACIÓN PROFESIONAL
-===================================================== -->
-
-<section class="estructura pantalla" id="fp">
-
-  <nav class="navegacion-pagina">
-
-    <button class="nav-anterior" data-ir="segundo-bach">
-      ← 2.º Bach
-    </button>
-
-    <button class="btn-home">
-      🏠
-    </button>
-
-    <button class="nav-siguiente" data-ir="inicio">
-      Inicio →
-    </button>
-
-  </nav>
-
-
-
-  <div class="titulo-seccion">
-
-    <span class="numero-seccion">
-      05
-    </span>
-
-    <div>
-
-      <small>
-        FORMACIÓN PROFESIONAL
-      </small>
-
-      <h2>
-        Empresa · Emprendimiento · Empleabilidad
-      </h2>
-
-      <p>
-        Un espacio flexible para adaptar
-        El Aula de Economía a distintos ciclos
-        y módulos profesionales.
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="selectores-fp">
-
-    <div class="campo">
-
-      <label for="ciclo">
-        Ciclo formativo
-      </label>
-
-      <select id="ciclo">
-
-        <option>
-          Selecciona un ciclo
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="campo">
-
-      <label for="modulo">
-        Módulo
-      </label>
-
-      <select id="modulo">
-
-        <option>
-          Selecciona un módulo
-        </option>
-
-      </select>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="tarjetas-placeholder">
-
-    <article>
-      <span>💼</span>
-      <h3>Situaciones profesionales</h3>
-    </article>
-
-    <article>
-      <span>📄</span>
-      <h3>Documentos</h3>
-    </article>
-
-    <article>
-      <span>🎯</span>
-      <h3>Simulaciones</h3>
-    </article>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROYECTO
-===================================================== -->
-
-<section class="pantalla" id="proyecto">
-
-  <div class="titulo-seccion">
-
-    <span class="numero-seccion">
-      🚀
-    </span>
-
-    <div>
-
-      <small>
-        APRENDER HACIENDO
-      </small>
-
-      <h2>
-        Proyectos
-      </h2>
-
-      <p>
-        Propuestas para aplicar los contenidos de Economía,
-        Empresa y Emprendimiento a situaciones prácticas.
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- PROYECTO 4 ESO -->
-
-  <section class="proyecto-transversal">
-
-    <button class="proyecto-desplegable">
-
-      <div class="proyecto-cabecera">
-
-        <span class="proyecto-icono">
-          🚀
-        </span>
-
-        <div>
-
-          <small>
-            4.º ESO · PROYECTO TRANSVERSAL
-          </small>
-
-          <h2>
-            MI PROYECTO EMPRENDEDOR
-          </h2>
+          <h3>VÍDEO EXPLICATIVO</h3>
 
           <p>
-            Construye tu proyecto paso a paso aplicando
-            lo que aprendes durante el curso.
+            Una explicación visual y breve de las principales
+            ideas del tema antes de comenzar a practicar.
           </p>
 
         </div>
 
+
+        <div class="recurso-video">
+
+          <video controls preload="metadata">
+            <source
+              src="Tema_1_Actividad_Economica_voz_mas_natural.mp4"
+              type="video/mp4">
+            Tu navegador no puede reproducir el vídeo.
+          </video>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- REPASA -->
+
+  <section class="zona-contenido zona-repasa">
+
+    <header class="titulo-zona">
+
+      <span>02</span>
+
+      <div>
+        <h2>REPASA</h2>
+        <p>Comprueba lo que has aprendido.</p>
       </div>
 
-      <span class="flecha-proyecto">
-        ⌄
-      </span>
+    </header>
 
+
+    <div class="repasa-grid">
+
+      <!-- AUTOTEST -->
+
+      <article class="repasa-card">
+
+        <span class="numero-amarillo">01</span>
+
+        <small>COMPRUEBA</small>
+
+        <h3>AUTOTEST</h3>
+
+        <p>
+          Responde y después abre la solución para comprobar
+          si has entendido los conceptos principales.
+        </p>
+
+        <details>
+
+          <summary class="btn-amarillo">
+            EMPEZAR TEST →
+          </summary>
+
+
+          <div class="contenido-desplegable">
+
+
+            <div class="pregunta">
+
+              <h4>1. ¿Qué estudia la economía?</h4>
+
+              <label>
+                <input type="radio" name="q1">
+                Únicamente cómo ganan dinero las empresas.
+              </label>
+
+              <label>
+                <input type="radio" name="q1">
+                Cómo administrar recursos limitados para satisfacer necesidades.
+              </label>
+
+              <label>
+                <input type="radio" name="q1">
+                Solamente el funcionamiento de los bancos.
+              </label>
+
+              <details class="solucion">
+
+                <summary>VER SOLUCIÓN +</summary>
+
+                <p>
+                  <strong>Respuesta correcta:</strong>
+                  cómo administrar recursos limitados para satisfacer necesidades.
+                  La economía surge precisamente porque los recursos
+                  disponibles son limitados.
+                </p>
+
+              </details>
+
+            </div>
+
+
+            <div class="pregunta">
+
+              <h4>2. ¿Por qué existe escasez?</h4>
+
+              <label>
+                <input type="radio" name="q2">
+                Porque los recursos son limitados frente a nuestras necesidades.
+              </label>
+
+              <label>
+                <input type="radio" name="q2">
+                Porque todo tiene un precio elevado.
+              </label>
+
+              <label>
+                <input type="radio" name="q2">
+                Porque existen pocas empresas.
+              </label>
+
+              <details class="solucion">
+
+                <summary>VER SOLUCIÓN +</summary>
+
+                <p>
+                  <strong>Respuesta correcta:</strong>
+                  los recursos son limitados frente a unas necesidades
+                  que son numerosas y se renuevan.
+                </p>
+
+              </details>
+
+            </div>
+
+
+            <div class="pregunta">
+
+              <h4>3. ¿Qué es el coste de oportunidad?</h4>
+
+              <label>
+                <input type="radio" name="q3">
+                El precio que pagamos por un producto.
+              </label>
+
+              <label>
+                <input type="radio" name="q3">
+                La mejor alternativa a la que renunciamos al elegir.
+              </label>
+
+              <label>
+                <input type="radio" name="q3">
+                El coste de fabricar un producto.
+              </label>
+
+              <details class="solucion">
+
+                <summary>VER SOLUCIÓN +</summary>
+
+                <p>
+                  <strong>Respuesta correcta:</strong>
+                  la mejor alternativa a la que renunciamos cuando
+                  tomamos una decisión.
+                </p>
+
+              </details>
+
+            </div>
+
+
+            <div class="pregunta">
+
+              <h4>
+                4. ¿Cuál de estos ejemplos pertenece al factor trabajo?
+              </h4>
+
+              <label>
+                <input type="radio" name="q4">
+                Una máquina.
+              </label>
+
+              <label>
+                <input type="radio" name="q4">
+                La actividad realizada por un trabajador.
+              </label>
+
+              <label>
+                <input type="radio" name="q4">
+                Una materia prima.
+              </label>
+
+              <details class="solucion">
+
+                <summary>VER SOLUCIÓN +</summary>
+
+                <p>
+                  <strong>Respuesta correcta:</strong>
+                  la actividad realizada por un trabajador.
+                  El trabajo es el esfuerzo físico o intelectual
+                  que realizan las personas en el proceso productivo.
+                </p>
+
+              </details>
+
+            </div>
+
+
+            <div class="pregunta">
+
+              <h4>
+                5. El horno utilizado por una panadería es...
+              </h4>
+
+              <label>
+                <input type="radio" name="q5">
+                Capital.
+              </label>
+
+              <label>
+                <input type="radio" name="q5">
+                Trabajo.
+              </label>
+
+              <label>
+                <input type="radio" name="q5">
+                Recurso natural.
+              </label>
+
+              <details class="solucion">
+
+                <summary>VER SOLUCIÓN +</summary>
+
+                <p>
+                  <strong>Respuesta correcta:</strong>
+                  capital. Es un bien producido que se utiliza
+                  para producir otros bienes.
+                </p>
+
+              </details>
+
+            </div>
+
+          </div>
+
+        </details>
+
+      </article>
+
+
+      <!-- EJERCICIO RESUELTO -->
+
+      <article class="repasa-card">
+
+        <span class="numero-amarillo">02</span>
+
+        <small>APLICA</small>
+
+        <h3>EJERCICIO RESUELTO</h3>
+
+        <p>
+          Aplica los factores de producción a una situación sencilla.
+        </p>
+
+        <details>
+
+          <summary class="btn-amarillo">
+            VER EJERCICIO →
+          </summary>
+
+
+          <div class="contenido-desplegable">
+
+            <h4>ENUNCIADO</h4>
+
+            <p>
+              Una panadería utiliza harina, agua, un horno,
+              el local y el trabajo de dos panaderos para producir pan.
+            </p>
+
+            <p>
+              Clasifica cada elemento según el factor de producción
+              al que pertenece.
+            </p>
+
+
+            <details class="solucion">
+
+              <summary>VER SOLUCIÓN +</summary>
+
+              <div>
+
+                <p>
+                  <strong>Recursos naturales:</strong>
+                  harina y agua.
+                </p>
+
+                <p>
+                  <strong>Trabajo:</strong>
+                  la actividad física e intelectual de los panaderos.
+                </p>
+
+                <p>
+                  <strong>Capital:</strong>
+                  el horno, el local y las herramientas utilizadas
+                  en la producción.
+                </p>
+
+                <p class="idea-clave">
+                  La producción requiere combinar distintos
+                  factores productivos.
+                </p>
+
+              </div>
+
+            </details>
+
+          </div>
+
+        </details>
+
+      </article>
+
+
+      <!-- ECONOMÍA EN TU VIDA -->
+
+      <article class="repasa-card">
+
+        <span class="numero-amarillo">03</span>
+
+        <small>PIENSA</small>
+
+        <h3>ECONOMÍA EN TU VIDA</h3>
+
+        <p>
+          Descubre cómo una decisión cotidiana también
+          es una decisión económica.
+        </p>
+
+        <details>
+
+          <summary class="btn-amarillo">
+            VER ACTIVIDAD →
+          </summary>
+
+
+          <div class="contenido-desplegable">
+
+            <h4>¿QUÉ HARÍAS CON 20 €?</h4>
+
+            <p>
+              Tienes 20 € disponibles para el fin de semana.
+              Puedes elegir entre:
+            </p>
+
+            <ul>
+              <li>Ir al cine.</li>
+              <li>Cenar con tus amigos.</li>
+              <li>Guardar el dinero para otra compra.</li>
+            </ul>
+
+            <p><strong>1.</strong> ¿Qué opción elegirías?</p>
+            <p><strong>2.</strong> ¿A qué estás renunciando?</p>
+            <p><strong>3.</strong> ¿Cuál sería tu coste de oportunidad?</p>
+            <p>
+              <strong>4.</strong>
+              ¿Cambiaría tu decisión si tuvieras 50 €?
+              Explica por qué.
+            </p>
+
+
+            <details class="solucion">
+
+              <summary>VER SOLUCIÓN / REFLEXIÓN +</summary>
+
+              <div>
+
+                <p>
+                  No existe una única elección correcta.
+                  La respuesta depende de las preferencias de cada persona.
+                </p>
+
+                <p>
+                  Lo importante es comprender que elegir una opción
+                  significa renunciar a otras.
+                </p>
+
+                <p>
+                  El <strong>coste de oportunidad</strong>
+                  será la mejor alternativa que hemos descartado.
+                </p>
+
+                <p>
+                  Si disponemos de 50 € en lugar de 20 €,
+                  cambia nuestra restricción de recursos y pueden
+                  aparecer nuevas posibilidades de elección.
+                </p>
+
+                <p class="idea-clave">
+                  La economía está presente cada vez que decidimos
+                  cómo utilizar unos recursos limitados.
+                </p>
+
+              </div>
+
+            </details>
+
+          </div>
+
+        </details>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <div class="navegacion-inferior">
+
+    <button data-ir="cuarto-eso">
+      ← VOLVER A 4.º ESO
     </button>
 
+    <button class="btn-amarillo" data-ir="tema-2">
+      TEMA 2 →
+    </button>
 
-    <div class="contenido-proyecto">
+  </div>
 
-      <div class="fases-proyecto">
+</section>
+
+
+<!-- =========================================================
+     TEMA 2
+========================================================= -->
+
+<section id="tema-2" class="pantalla tema-simple">
+
+  <div class="hero-interior">
+
+    <div>
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">BLOQUE A · TEMA 02</span>
+      <h1>LOS AGENTES ECONÓMICOS</h1>
+      <p>
+        Familias, empresas y sector público:
+        descubre qué papel desempeña cada uno en la economía.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="proximamente">
+    <span>02</span>
+    <h2>Contenido en desarrollo</h2>
+    <p>
+      Esta estructura está preparada para incorporar
+      apuntes, vídeo, actividades y recursos.
+    </p>
+  </div>
+
+  <div class="navegacion-inferior">
+    <button data-ir="tema-1">← TEMA 1</button>
+    <button class="btn-amarillo" data-ir="tema-3">TEMA 3 →</button>
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEMA 3
+========================================================= -->
+
+<section id="tema-3" class="pantalla tema-simple">
+
+  <div class="hero-interior">
+
+    <div>
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">BLOQUE A · TEMA 03</span>
+      <h1>LOS SISTEMAS ECONÓMICOS</h1>
+      <p>
+        Diferentes formas de organizar la economía
+        y responder a las principales decisiones económicas.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="proximamente">
+    <span>03</span>
+    <h2>Contenido en desarrollo</h2>
+    <p>
+      Esta estructura está preparada para incorporar
+      apuntes, vídeo, actividades y recursos.
+    </p>
+  </div>
+
+  <div class="navegacion-inferior">
+    <button data-ir="tema-2">← TEMA 2</button>
+    <button class="btn-amarillo" data-ir="cuarto-eso">4.º ESO →</button>
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     1.º BACH
+========================================================= -->
+
+<section id="primero-bach" class="pantalla curso-futuro">
+
+  <div class="hero-interior">
+
+    <div>
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">1.º BACHILLERATO</span>
+      <h1>ECONOMÍA</h1>
+      <p>
+        Un espacio preparado para ampliar progresivamente
+        El Aula de Economía.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="tres-columnas">
+
+    <article>
+      <span>01</span>
+      <h3>TEMARIO</h3>
+      <p>Contenidos y materiales de clase.</p>
+    </article>
+
+    <article>
+      <span>02</span>
+      <h3>ACTIVIDADES</h3>
+      <p>Ejercicios, retos y aplicación práctica.</p>
+    </article>
+
+    <article>
+      <span>03</span>
+      <h3>PROYECTOS</h3>
+      <p>Economía aplicada a situaciones reales.</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     2.º BACH
+========================================================= -->
+
+<section id="segundo-bach" class="pantalla curso-futuro">
+
+  <div class="hero-interior">
+
+    <div>
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">2.º BACHILLERATO</span>
+      <h1>EMPRESA Y DISEÑO DE MODELOS DE NEGOCIO</h1>
+      <p>
+        Empresa, análisis de casos y preparación progresiva
+        de la materia.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="tres-columnas">
+
+    <article>
+      <span>01</span>
+      <h3>TEMARIO</h3>
+      <p>Contenidos y materiales de la asignatura.</p>
+    </article>
+
+    <article>
+      <span>02</span>
+      <h3>CASOS EMPRESARIALES</h3>
+      <p>Análisis de empresas y situaciones reales.</p>
+    </article>
+
+    <article>
+      <span>03</span>
+      <h3>PAU</h3>
+      <p>Recursos para preparar la prueba.</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FP
+========================================================= -->
+
+<section id="fp" class="pantalla curso-futuro">
+
+  <div class="hero-interior">
+
+    <div>
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">FORMACIÓN PROFESIONAL</span>
+      <h1>EMPRESA · EMPRENDIMIENTO · EMPLEABILIDAD</h1>
+      <p>
+        Un espacio flexible para adaptar los recursos
+        a distintos ciclos y módulos profesionales.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="tres-columnas">
+
+    <article>
+      <span>01</span>
+      <h3>SITUACIONES PROFESIONALES</h3>
+      <p>Casos y problemas vinculados al mundo laboral.</p>
+    </article>
+
+    <article>
+      <span>02</span>
+      <h3>DOCUMENTOS</h3>
+      <p>Materiales y recursos para el alumnado.</p>
+    </article>
+
+    <article>
+      <span>03</span>
+      <h3>SIMULACIONES</h3>
+      <p>Aprendizaje aplicado a contextos profesionales.</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROYECTOS
+========================================================= -->
+
+<section id="proyecto" class="pantalla proyectos">
+
+  <div class="hero-interior hero-proyecto">
+
+    <div>
+      <div class="linea-amarilla"></div>
+      <span class="eyebrow">APRENDER HACIENDO</span>
+      <h1>PROYECTOS</h1>
+      <p>
+        Del conocimiento a la acción:
+        aplicar, crear, decidir y presentar.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="proyectos-lista">
+
+
+    <details class="proyecto-item">
+
+      <summary>
+
+        <span class="proyecto-numero">01</span>
+
+        <div>
+          <small>4.º ESO</small>
+          <h2>MI PROYECTO EMPRENDEDOR</h2>
+          <p>Construye una idea de negocio paso a paso.</p>
+        </div>
+
+        <b>+</b>
+
+      </summary>
+
+
+      <div class="fases">
 
         <article>
           <span>01</span>
-          <strong>Equipo</strong>
-          <p>Crea tu equipo y organiza funciones y roles.</p>
+          <h3>EQUIPO</h3>
+          <p>Organiza funciones y responsabilidades.</p>
         </article>
 
         <article>
           <span>02</span>
-          <strong>Idea</strong>
-          <p>Detecta una necesidad y transforma el problema en una idea.</p>
+          <h3>IDEA</h3>
+          <p>Detecta una necesidad y plantea una solución.</p>
         </article>
 
         <article>
           <span>03</span>
-          <strong>Mercado</strong>
-          <p>Define tu cliente, analiza la competencia e investiga el mercado.</p>
+          <h3>MERCADO</h3>
+          <p>Investiga clientes y competencia.</p>
         </article>
 
         <article>
           <span>04</span>
-          <strong>Empresa</strong>
-          <p>Construye la empresa y analiza su impacto.</p>
+          <h3>EMPRESA</h3>
+          <p>Construye la propuesta empresarial.</p>
         </article>
 
         <article>
           <span>05</span>
-          <strong>Finanzas</strong>
-          <p>Prepara el presupuesto y estudia cómo financiar el proyecto.</p>
+          <h3>FINANZAS</h3>
+          <p>Analiza costes, ingresos y financiación.</p>
         </article>
 
         <article>
           <span>06</span>
-          <strong>Prototipo</strong>
-          <p>Planifica y crea un primer prototipo.</p>
+          <h3>PROTOTIPO</h3>
+          <p>Transforma la idea en una propuesta visible.</p>
         </article>
 
         <article>
           <span>07</span>
-          <strong>Validación</strong>
-          <p>Prueba, escucha y mejora tu propuesta.</p>
+          <h3>VALIDACIÓN</h3>
+          <p>Prueba, escucha y mejora.</p>
         </article>
 
         <article>
           <span>08</span>
-          <strong>Presentación</strong>
-          <p>Presenta y defiende tu proyecto.</p>
+          <h3>PRESENTACIÓN</h3>
+          <p>Comunica y defiende el proyecto.</p>
         </article>
 
       </div>
 
-    </div>
-
-  </section>
+    </details>
 
 
+    <details class="proyecto-item">
 
-  <!-- PROYECTO 1 BACH -->
+      <summary>
 
-  <section class="proyecto-transversal">
-
-    <button class="proyecto-desplegable">
-
-      <div class="proyecto-cabecera">
-
-        <span class="proyecto-icono">
-          📘
-        </span>
+        <span class="proyecto-numero">02</span>
 
         <div>
-
-          <small>
-            1.º BACHILLERATO
-          </small>
-
-          <h2>
-            ANALIZAMOS UNA EMPRESA Y SU ENTORNO
-          </h2>
-
-          <p>
-            Investiga una empresa real y relaciona su actividad
-            con los contenidos económicos trabajados en clase.
-          </p>
-
+          <small>1.º BACHILLERATO</small>
+          <h2>ANALIZAMOS UNA EMPRESA Y SU ENTORNO</h2>
+          <p>Economía aplicada a una empresa real.</p>
         </div>
 
-      </div>
+        <b>+</b>
 
-      <span class="flecha-proyecto">
-        ⌄
-      </span>
-
-    </button>
+      </summary>
 
 
-    <div class="contenido-proyecto">
-
-      <div class="fases-proyecto">
+      <div class="fases cuatro">
 
         <article>
           <span>01</span>
-          <strong>Empresa</strong>
-          <p>Selecciona una empresa y conoce su actividad.</p>
+          <h3>EMPRESA</h3>
+          <p>Selecciona y conoce su actividad.</p>
         </article>
 
         <article>
           <span>02</span>
-          <strong>Entorno</strong>
-          <p>Analiza los factores económicos que influyen en ella.</p>
+          <h3>ENTORNO</h3>
+          <p>Analiza los factores que influyen en ella.</p>
         </article>
 
         <article>
           <span>03</span>
-          <strong>Mercado</strong>
-          <p>Estudia consumidores, competencia y funcionamiento del mercado.</p>
+          <h3>MERCADO</h3>
+          <p>Estudia consumidores y competencia.</p>
         </article>
 
         <article>
           <span>04</span>
-          <strong>Conclusiones</strong>
-          <p>Presenta los resultados y argumenta tus conclusiones.</p>
+          <h3>CONCLUSIONES</h3>
+          <p>Presenta y argumenta los resultados.</p>
         </article>
 
       </div>
 
-    </div>
-
-  </section>
+    </details>
 
 
+    <details class="proyecto-item">
 
-  <!-- PROYECTO 2 BACH -->
+      <summary>
 
-  <section class="proyecto-transversal">
-
-    <button class="proyecto-desplegable">
-
-      <div class="proyecto-cabecera">
-
-        <span class="proyecto-icono">
-          📊
-        </span>
+        <span class="proyecto-numero">03</span>
 
         <div>
-
-          <small>
-            2.º BACHILLERATO
-          </small>
-
-          <h2>
-            DISEÑAMOS UN MODELO DE NEGOCIO
-          </h2>
-
-          <p>
-            Diseña una propuesta empresarial y analiza
-            cómo puede generar valor de forma viable.
-          </p>
-
+          <small>2.º BACHILLERATO</small>
+          <h2>DISEÑAMOS UN MODELO DE NEGOCIO</h2>
+          <p>De la propuesta de valor a la viabilidad.</p>
         </div>
 
-      </div>
+        <b>+</b>
 
-      <span class="flecha-proyecto">
-        ⌄
-      </span>
-
-    </button>
+      </summary>
 
 
-    <div class="contenido-proyecto">
-
-      <div class="fases-proyecto">
+      <div class="fases cuatro">
 
         <article>
           <span>01</span>
-          <strong>Propuesta de valor</strong>
+          <h3>PROPUESTA DE VALOR</h3>
           <p>Define qué necesidad quieres resolver.</p>
         </article>
 
         <article>
           <span>02</span>
-          <strong>Cliente</strong>
-          <p>Identifica el público al que se dirige el proyecto.</p>
+          <h3>CLIENTE</h3>
+          <p>Identifica a quién se dirige la propuesta.</p>
         </article>
 
         <article>
           <span>03</span>
-          <strong>Modelo</strong>
-          <p>Diseña los elementos fundamentales del modelo de negocio.</p>
+          <h3>MODELO</h3>
+          <p>Diseña cómo funcionará el negocio.</p>
         </article>
 
         <article>
           <span>04</span>
-          <strong>Presentación</strong>
-          <p>Defiende la viabilidad de la propuesta.</p>
+          <h3>PRESENTACIÓN</h3>
+          <p>Argumenta la viabilidad del modelo.</p>
         </article>
 
       </div>
 
+    </details>
+
+
+    <details class="proyecto-item">
+
+      <summary>
+
+        <span class="proyecto-numero">04</span>
+
+        <div>
+          <small>FORMACIÓN PROFESIONAL</small>
+          <h2>PROYECTO INTERMODULAR: DE LA IDEA A LA SOLUCIÓN PROFESIONAL</h2>
+          <p>Un reto aplicado al entorno profesional.</p>
+        </div>
+
+        <b>+</b>
+
+      </summary>
+
+
+      <div class="fases cuatro">
+
+        <article>
+          <span>01</span>
+          <h3>RETO</h3>
+          <p>Identifica una necesidad profesional.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>PLANIFICACIÓN</h3>
+          <p>Organiza tareas, recursos y responsabilidades.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>SOLUCIÓN</h3>
+          <p>Desarrolla una propuesta práctica.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>EVALUACIÓN</h3>
+          <p>Valora los resultados y plantea mejoras.</p>
+        </article>
+
+      </div>
+
+    </details>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOBRE MÍ
+========================================================= -->
+
+<section id="sobre-mi" class="pantalla sobre-mi">
+
+  <div class="sobre-hero">
+
+    <div>
+
+      <div class="linea-amarilla"></div>
+
+      <h1>SOBRE <span>MÍ</span></h1>
+
+      <h2>La persona detrás de este proyecto</h2>
+
+      <p>
+        Una breve presentación para que me conozcas,
+        sepas por qué he creado esta web y qué encontrarás en ella.
+      </p>
+
     </div>
 
-  </section>
+    <div class="sobre-hero-imagen"></div>
+
+  </div>
 
 
+  <div class="sobre-grid">
 
-  <!-- PROYECTO FP -->
 
-  <section class="proyecto-transversal">
+    <!-- 1 QUIÉN SOY -->
 
-    <button class="proyecto-desplegable">
+    <article class="sobre-bloque quien-soy">
 
-      <div class="proyecto-cabecera">
+      <h2><span>1.</span> QUIÉN SOY</h2>
 
-        <span class="proyecto-icono">
-          🛠️
-        </span>
+      <div class="sobre-dos-columnas">
+
+        <div class="foto-perfil"></div>
 
         <div>
 
-          <small>
-            FORMACIÓN PROFESIONAL
-          </small>
-
-          <h2>
-            DE LA IDEA A LA SOLUCIÓN PROFESIONAL
-          </h2>
+          <p>
+            Me llamo <strong>Beatriz</strong>.
+            Soy graduada en <strong>Contabilidad y Finanzas</strong>
+            y miembro del <strong>Colegio de Economistas de Madrid</strong>.
+          </p>
 
           <p>
-            Resuelve un reto profesional mediante una propuesta
-            práctica, organizada y aplicable.
+            Actualmente estoy realizando el
+            <strong>Máster de Formación del Profesorado de Educación
+            Secundaria y Bachillerato</strong>, en la especialidad
+            de Economía y Empresa, en la
+            <strong>Universidad Rey Juan Carlos</strong>.
+          </p>
+
+          <p>
+            Este proyecto nace como parte de mi formación docente
+            y de mi interés por crear recursos que ayuden a explicar
+            la Economía de una forma clara, práctica y visual.
           </p>
 
         </div>
 
       </div>
 
-      <span class="flecha-proyecto">
-        ⌄
-      </span>
-
-    </button>
+    </article>
 
 
-    <div class="contenido-proyecto">
+    <!-- 2 FORMACIÓN -->
 
-      <div class="fases-proyecto">
+    <article class="sobre-bloque">
 
-        <article>
-          <span>01</span>
-          <strong>Reto</strong>
-          <p>Identifica una necesidad del entorno profesional.</p>
-        </article>
+      <h2><span>2.</span> MI FORMACIÓN</h2>
 
-        <article>
-          <span>02</span>
-          <strong>Planificación</strong>
-          <p>Organiza tareas, recursos y responsabilidades.</p>
-        </article>
+      <div class="formacion-lista">
 
-        <article>
-          <span>03</span>
-          <strong>Solución</strong>
-          <p>Desarrolla una propuesta práctica.</p>
-        </article>
+        <div>
+          <strong>Contabilidad y Finanzas</strong>
+          <p>Formación universitaria vinculada al ámbito económico y financiero.</p>
+        </div>
 
-        <article>
-          <span>04</span>
-          <strong>Evaluación</strong>
-          <p>Valora los resultados y plantea mejoras.</p>
-        </article>
+        <div>
+          <strong>Máster de Formación del Profesorado</strong>
+          <p>
+            Especialidad de Economía y Empresa ·
+            Universidad Rey Juan Carlos.
+          </p>
+        </div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-
-<!-- =====================================================
-     SOBRE MÍ
-===================================================== -->
-
-<section class="pantalla portfolio-sobremi" id="sobre-mi">
-
-  <div class="portfolio-cabecera">
-
-    <span class="portfolio-etiqueta">
-      SOBRE MÍ
-    </span>
-
-    <h2>
-      Sobre mí
-    </h2>
-
-    <span class="portfolio-linea"></span>
-
-    <p>
-      Economía, formación y una nueva etapa en la docencia
-    </p>
-
-  </div>
-
-
-
-  <div class="portfolio-grid">
-
-
-    <article class="portfolio-card">
-
-      <div class="portfolio-icono">
-        ♙
-      </div>
-
-      <div class="portfolio-contenido">
-
-        <h3>
-          Hola, soy Beatriz
-        </h3>
-
-        <span class="portfolio-subtitulo">
-          PRESENTACIÓN
-        </span>
-
-        <p>
-          Graduada en <strong>Contabilidad y Finanzas</strong>
-          y miembro del <strong>Colegio de Economistas de Madrid</strong>.
-        </p>
-
-        <p>
-          Mi trayectoria incluye <strong>más de 20 años en la
-          Dirección General de Tributos de la Consejería de Hacienda</strong>,
-          como Auxiliar de Control e Información.
-        </p>
-
-        <p>
-          Actualmente curso el <strong>Máster de Formación del Profesorado</strong>
-          para orientar mi trayectoria hacia la docencia de Economía y Empresa.
-        </p>
+        <div>
+          <strong>Formación complementaria</strong>
+          <p>
+            Herramientas digitales, creación de contenidos
+            y recursos aplicados a la educación.
+          </p>
+        </div>
 
       </div>
 
     </article>
 
 
+    <!-- 3 EXPERIENCIA -->
 
-    <article class="portfolio-card portfolio-card-azul">
+    <article class="sobre-bloque">
 
-      <div class="portfolio-icono">
-        💡
-      </div>
+      <h2><span>3.</span> MI EXPERIENCIA</h2>
 
-      <div class="portfolio-contenido">
+      <div class="experiencia-lista">
 
-        <h3>
-          Mis intereses
-        </h3>
+        <div>
+          <strong>Administración pública</strong>
+          <p>
+            Más de 20 años de experiencia en la
+            Dirección General de Tributos de la Consejería de Hacienda,
+            como Auxiliar de Control e Información.
+          </p>
+        </div>
 
-        <span class="portfolio-subtitulo">
-          ECONOMÍA CON SENTIDO REAL
-        </span>
+        <div>
+          <strong>Economía y análisis</strong>
+          <p>
+            Experiencia profesional relacionada con el análisis
+            de información y la comprensión de procesos económicos.
+          </p>
+        </div>
 
-        <p>
-          Me interesa una Economía
-          <strong>práctica y conectada con la vida real</strong>,
-          donde comprender sea más importante que memorizar.
-        </p>
+        <div>
+          <strong>Experiencias formativas</strong>
+          <p>
+            Experiencias puntuales impartiendo clases de refuerzo
+            y formación relacionada con fiscalidad.
+          </p>
+        </div>
 
-        <p>
-          También el uso de <strong>herramientas digitales</strong>
-          para crear recursos visuales e interactivos que favorezcan
-          la autonomía del alumnado.
-        </p>
-
-        <p>
-          Me apasionan los <strong>documentales</strong>,
-          especialmente los relacionados con la
-          <strong>economía y la sociedad</strong>,
-          porque permiten descubrir otras realidades,
-          despertar la curiosidad y mirar el mundo
-          desde diferentes perspectivas.
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="portfolio-card">
-
-      <div class="portfolio-icono">
-        🌱
-      </div>
-
-      <div class="portfolio-contenido">
-
-        <h3>
-          Un poco más sobre mí
-        </h3>
-
-        <span class="portfolio-subtitulo">
-          MI FORMA DE ENTENDER EL APRENDIZAJE
-        </span>
-
-        <p>
-          Soy curiosa, práctica y partidaria de
-          <strong>aprender entendiendo el porqué de las cosas</strong>.
-        </p>
-
-        <p>
-          He tenido experiencias puntuales impartiendo
-          clases de refuerzo y formación relacionada con fiscalidad.
-        </p>
-
-        <blockquote>
-          “Enseñar no es hacer el camino por el alumno,
-          sino darle herramientas para que aprenda
-          a recorrerlo por sí mismo.”
-        </blockquote>
+        <div>
+          <strong>Una nueva etapa</strong>
+          <p>
+            Actualmente oriento mi trayectoria hacia la docencia
+            de Economía y Empresa.
+          </p>
+        </div>
 
       </div>
 
     </article>
 
 
+    <!-- 4 INTERESES -->
 
-    <article class="portfolio-card portfolio-card-amarillo">
+    <article class="sobre-bloque intereses-bloque">
 
-      <div class="portfolio-icono">
-        🎯
-      </div>
+      <h2><span>4.</span> MIS INTERESES</h2>
 
-      <div class="portfolio-contenido">
+      <div class="intereses-grid">
 
-        <h3>
-          Objetivos de mi portfolio
-        </h3>
+        <div>
+          <div class="interes-imagen interes-economia"></div>
+          <h3>ECONOMÍA</h3>
+          <p>Entender el mundo que nos rodea.</p>
+        </div>
 
-        <span class="portfolio-subtitulo">
-          UN PROYECTO ESCALABLE
-        </span>
+        <div>
+          <div class="interes-imagen interes-educacion"></div>
+          <h3>EDUCACIÓN</h3>
+          <p>Compartir conocimiento y aprender cada día.</p>
+        </div>
 
-        <p>
-          <strong>El Aula de Economía</strong>
-          recoge mi aprendizaje como futura docente
-          y recursos de Economía, Empresa y Emprendimiento.
-        </p>
+        <div>
+          <div class="interes-imagen interes-documentales"></div>
+          <h3>DOCUMENTALES</h3>
+          <p>
+            Descubrir otras realidades y mirar el mundo
+            desde diferentes perspectivas.
+          </p>
+        </div>
 
-        <p>
-          Es un <strong>proyecto escalable</strong>,
-          preparado para incorporar nuevos cursos,
-          contenidos y actividades para mi futura práctica docente.
-        </p>
-
-        <p>
-          <strong>Objetivos:</strong>
-          crear recursos · explorar herramientas digitales ·
-          conectar la Economía con la vida real.
-        </p>
+        <div>
+          <div class="interes-imagen interes-digital"></div>
+          <h3>RECURSOS DIGITALES</h3>
+          <p>
+            Crear materiales visuales e interactivos
+            que favorezcan la autonomía del alumnado.
+          </p>
+        </div>
 
       </div>
 
     </article>
 
-  </div>
+
+    <!-- 5 POR QUÉ -->
+
+    <article class="sobre-bloque">
+
+      <h2><span>5.</span> ¿POR QUÉ ESTA WEB?</h2>
+
+      <div class="porque-lista">
+
+        <div>
+          <strong>Acercar la economía</strong>
+          <p>
+            Mostrar que la economía está presente
+            en muchas decisiones de nuestra vida cotidiana.
+          </p>
+        </div>
+
+        <div>
+          <strong>Aprender de forma diferente</strong>
+          <p>
+            Combinar explicaciones claras, ejemplos reales,
+            actividades y recursos visuales.
+          </p>
+        </div>
+
+        <div>
+          <strong>Crear un recurso para el aula</strong>
+          <p>
+            Construir un espacio útil para el alumnado
+            y adaptable a mi futura práctica docente.
+          </p>
+        </div>
+
+        <div>
+          <strong>Un proyecto escalable</strong>
+          <p>
+            La web está preparada para incorporar nuevos cursos,
+            temas, materiales y proyectos.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
 
 
+    <!-- 6 OBJETIVOS -->
 
-  <div class="portfolio-cierre">
+    <article class="sobre-bloque objetivos">
 
-    <div class="portfolio-cierre-icono">
-      📖
-    </div>
+      <h2><span>6.</span> OBJETIVOS DEL PROYECTO</h2>
 
-    <div>
+      <div>
+        <strong>FACILITAR EL APRENDIZAJE</strong>
+        <p>Materiales estructurados, claros y atractivos.</p>
+      </div>
 
-      <span>
-        EL AULA DE ECONOMÍA
-      </span>
+      <div>
+        <strong>CONECTAR CON LA REALIDAD</strong>
+        <p>Ejemplos y situaciones cercanas al alumnado.</p>
+      </div>
 
-      <h3>
-        Entender para <strong>decidir.</strong>
-      </h3>
+      <div>
+        <strong>FOMENTAR LA REFLEXIÓN</strong>
+        <p>
+          Mirar más allá y comprender el papel
+          de la economía en la sociedad.
+        </p>
+      </div>
 
-    </div>
+      <div>
+        <strong>FAVORECER LA AUTONOMÍA</strong>
+        <p>
+          Recursos que permitan aprender, practicar
+          y revisar los contenidos.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- 7 FORMA DE ENTENDER -->
+
+    <article class="sobre-bloque filosofia">
+
+      <h2><span>7.</span> MI FORMA DE ENTENDER EL APRENDIZAJE</h2>
+
+      <p>
+        Soy curiosa, práctica y partidaria de
+        <strong>aprender entendiendo el porqué de las cosas</strong>.
+      </p>
+
+      <p>
+        Creo en una educación cercana y útil,
+        donde comprender sea más importante que memorizar
+        y donde el alumnado pueda relacionar lo aprendido
+        con situaciones reales.
+      </p>
+
+    </article>
+
+
+    <!-- 8 FRASE -->
+
+    <article class="sobre-bloque frase-sobre">
+
+      <h2><span>8.</span> UNA FRASE QUE ME DEFINE</h2>
+
+      <blockquote>
+        “Enseñar no es hacer el camino por el alumno,
+        sino darle herramientas para que aprenda
+        a recorrerlo por sí mismo.”
+      </blockquote>
+
+    </article>
 
   </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      INSPÍRATE
-===================================================== -->
+========================================================= -->
 
 <section id="inspirate" class="pantalla inspirate">
 
-  <div class="inspirate-cabecera">
+  <div class="inspirate-hero">
 
-    <span class="inspirate-etiqueta">
-      INSPÍRATE
-    </span>
+    <div>
 
-    <h2>
-      Inspírate
-    </h2>
+      <div class="linea-amarilla"></div>
 
-    <h3>
-      Documentales para entender el mundo que nos rodea
-    </h3>
+      <h1>INSPÍ<span>RATE</span></h1>
 
-    <p>
-      Aquí encontrarás documentales y reportajes para reflexionar
-      sobre economía, sociedad, medioambiente, tecnología y mucho más.
-      Porque la realidad también se explica fuera del libro de texto.
-    </p>
+      <h2>Para mirar más allá</h2>
+
+      <p>
+        Una selección de vídeos, reportajes y recursos
+        para pensar, reflexionar y descubrir cómo la economía
+        se relaciona con la sociedad que nos rodea.
+      </p>
+
+    </div>
 
   </div>
 
 
-
-  <div class="inspirate-grid">
-
-
-    <!-- ECONOMÍA -->
-
-    <details class="inspirate-card economia">
-
-      <summary>
-
-        <span class="inspirate-icono">
-          💶
-        </span>
-
-        <span class="inspirate-categoria">
-          ECONOMÍA
-        </span>
-
-        <span class="inspirate-flecha">
-          ⌄
-        </span>
-
-      </summary>
+  <div class="inspirate-contenido">
 
 
-      <div class="inspirate-card-contenido">
+    <!-- RSC -->
 
-        <div class="inspirate-portada">
-          <span>🎬</span>
-          <small>RTVE PLAY</small>
+    <section class="categoria-inspirate">
+
+      <header>
+        <div>
+          <h2>RSC, EMPRESA Y SOCIEDAD</h2>
+          <p>Cómo las empresas pueden generar un impacto positivo.</p>
         </div>
+      </header>
 
-        <h3>
-          Consumo
-        </h3>
 
-        <div class="inspirate-tags">
-          <span>Consumo</span>
-          <span>Compras</span>
-          <span>Economía cotidiana</span>
-        </div>
+      <div class="recursos-inspirate">
 
-        <p>
-          ¿Compramos igual que antes? Una mirada a cómo han cambiado
-          nuestros hábitos de consumo y nuestra forma de comprar.
-        </p>
+        <article>
 
-        <a
-          class="inspirate-boton"
-          href="https://www.rtve.es/play/videos/generaciones/generacion-consumo/5460779/"
-          target="_blank"
-          rel="noopener noreferrer">
-          ▶ Ver en RTVE Play
-        </a>
+          <div class="thumb thumb-energia"></div>
+
+          <div>
+            <h3>Energía verde, ¿a qué precio?</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Una mirada a la transición energética,
+              la sostenibilidad y sus implicaciones.
+            </p>
+
+            <a
+              href="https://www.rtve.es/play/videos/comando-actualidad/energia-verde-precio/6902608/"
+              target="_blank"
+              rel="noopener noreferrer">
+              VER EN RTVE →
+            </a>
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="thumb thumb-sostenibilidad"></div>
+
+          <div>
+            <h3>Empresa y responsabilidad</h3>
+
+            <span class="fuente">PARA REFLEXIONAR</span>
+
+            <p>
+              Empresas, sostenibilidad y responsabilidad
+              ante la sociedad.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
-    </details>
-
-
-
-    <!-- EMPRESA Y RSC -->
-
-    <details class="inspirate-card empresa">
-
-      <summary>
-
-        <span class="inspirate-icono">
-          🌱
-        </span>
-
-        <span class="inspirate-categoria">
-          EMPRESA Y RSC
-        </span>
-
-        <span class="inspirate-flecha">
-          ⌄
-        </span>
-
-      </summary>
-
-
-      <div class="inspirate-card-contenido">
-
-        <div class="inspirate-portada">
-          <span>🌍</span>
-          <small>RTVE PLAY</small>
-        </div>
-
-        <h3>
-          Energía verde, ¿a qué precio?
-        </h3>
-
-        <div class="inspirate-tags">
-          <span>Empresa</span>
-          <span>Medioambiente</span>
-          <span>Sostenibilidad</span>
-        </div>
-
-        <p>
-          Una propuesta para reflexionar sobre la transición energética,
-          sus oportunidades y su impacto económico, social y ambiental.
-        </p>
-
-        <a
-          class="inspirate-boton"
-          href="https://www.rtve.es/play/videos/comando-actualidad/energia-verde-precio/6902608/"
-          target="_blank"
-          rel="noopener noreferrer">
-          ▶ Ver en RTVE Play
-        </a>
-
-      </div>
-
-    </details>
-
-
-
-    <!-- CONVIVENCIA -->
-
-    <details class="inspirate-card convivencia">
-
-      <summary>
-
-        <span class="inspirate-icono">
-          🤝
-        </span>
-
-        <span class="inspirate-categoria">
-          CONVIVENCIA Y VALORES
-        </span>
-
-        <span class="inspirate-flecha">
-          ⌄
-        </span>
-
-      </summary>
-
-
-      <div class="inspirate-card-contenido">
-
-        <div class="inspirate-portada">
-          <span>🧑‍🤝‍🧑</span>
-          <small>RTVE PLAY</small>
-        </div>
-
-        <h3>
-          Bullying: No es cosa de niños
-        </h3>
-
-        <div class="inspirate-tags">
-          <span>Convivencia</span>
-          <span>Respeto</span>
-          <span>Educación</span>
-        </div>
-
-        <p>
-          Un contenido para reflexionar sobre el acoso escolar,
-          la convivencia y la importancia de actuar entre todos.
-        </p>
-
-        <a
-          class="inspirate-boton"
-          href="https://www.rtve.es/play/videos/en-portada/bullying/6877637/"
-          target="_blank"
-          rel="noopener noreferrer">
-          ▶ Ver en RTVE Play
-        </a>
-
-      </div>
-
-    </details>
-
-
-
-    <!-- REDES SOCIALES -->
-
-    <details class="inspirate-card redes">
-
-      <summary>
-
-        <span class="inspirate-icono">
-          📱
-        </span>
-
-        <span class="inspirate-categoria">
-          REDES SOCIALES
-        </span>
-
-        <span class="inspirate-flecha">
-          ⌄
-        </span>
-
-      </summary>
-
-
-      <div class="inspirate-card-contenido">
-
-        <div class="inspirate-portada">
-          <span>📲</span>
-          <small>RTVE PLAY</small>
-        </div>
-
-        <h3>
-          La trampa de las redes sociales
-        </h3>
-
-        <div class="inspirate-tags">
-          <span>Tecnología</span>
-          <span>Redes sociales</span>
-          <span>Sociedad</span>
-        </div>
-
-        <p>
-          Una mirada crítica al funcionamiento de las redes sociales
-          y a su influencia en nuestra vida y nuestras decisiones.
-        </p>
-
-        <a
-          class="inspirate-boton"
-          href="https://www.rtve.es/play/videos/documentos-tv/trampa-redes-sociales/16742625/"
-          target="_blank"
-          rel="noopener noreferrer">
-          ▶ Ver en RTVE Play
-        </a>
-
-      </div>
-
-    </details>
-
+    </section>
 
 
     <!-- CULTURA -->
 
-    <details class="inspirate-card cultura">
+    <section class="categoria-inspirate">
 
-      <summary>
-
-        <span class="inspirate-icono">
-          🎨
-        </span>
-
-        <span class="inspirate-categoria">
-          CULTURA Y EDUCACIÓN
-        </span>
-
-        <span class="inspirate-flecha">
-          ⌄
-        </span>
-
-      </summary>
-
-
-      <div class="inspirate-card-contenido">
-
-        <div class="inspirate-portada">
-          <span>📚</span>
-          <small>RTVE PLAY</small>
+      <header>
+        <div>
+          <h2>CULTURA Y EDUCACIÓN</h2>
+          <p>
+            Ideas, conocimiento y experiencias
+            para entender mejor el mundo.
+          </p>
         </div>
+      </header>
 
-        <h3>
-          Las Sinsombrero
-        </h3>
 
-        <div class="inspirate-tags">
-          <span>Historia</span>
-          <span>Cultura</span>
-          <span>Educación</span>
-        </div>
+      <div class="recursos-inspirate tres">
 
-        <p>
-          Una oportunidad para conocer a mujeres de la Generación del 27
-          cuya aportación artística e intelectual quedó durante años
-          fuera del relato más conocido.
-        </p>
 
-        <a
-          class="inspirate-boton"
-          href="https://www.rtve.es/play/videos/las-sinsombrero/"
-          target="_blank"
-          rel="noopener noreferrer">
-          ▶ Ver en RTVE Play
-        </a>
+        <article>
+
+          <div class="thumb thumb-redes"></div>
+
+          <div>
+
+            <h3>La trampa de las redes sociales</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Cómo nos influyen las redes sociales
+              y qué podemos hacer para utilizarlas mejor.
+            </p>
+
+            <a
+              href="https://www.rtve.es/play/videos/documentos-tv/trampa-redes-sociales/16742625/"
+              target="_blank"
+              rel="noopener noreferrer">
+              VER EN RTVE →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="thumb thumb-bullying"></div>
+
+          <div>
+
+            <h3>Bullying: No es cosa de niños</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Prevención del acoso escolar,
+              convivencia y responsabilidad colectiva.
+            </p>
+
+            <a
+              href="https://www.rtve.es/play/videos/en-portada/bullying/6877637/"
+              target="_blank"
+              rel="noopener noreferrer">
+              VER EN RTVE →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="thumb thumb-ia"></div>
+
+          <div>
+
+            <h3>Porno, IA y menores</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Tecnología, inteligencia artificial,
+              menores y nuevos retos digitales.
+            </p>
+
+            <a
+              href="https://www.rtve.es/noticias/20260514/ia-porno-deepfake-documental-en-portada/17067614.shtml"
+              target="_blank"
+              rel="noopener noreferrer">
+              VER EN RTVE →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="thumb thumb-sinsombrero"></div>
+
+          <div>
+
+            <h3>Las Sinsombrero</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Cultura, educación y recuperación
+              de mujeres fundamentales de la Generación del 27.
+            </p>
+
+            <a
+              href="https://www.rtve.es/play/videos/las-sinsombrero/"
+              target="_blank"
+              rel="noopener noreferrer">
+              VER EN RTVE →
+            </a>
+
+          </div>
+
+        </article>
 
       </div>
 
-    </details>
+    </section>
 
 
+    <!-- CONSUMO -->
 
-    <!-- PARA PENSAR -->
+    <section class="categoria-inspirate">
 
-    <details class="inspirate-card pensar">
-
-      <summary>
-
-        <span class="inspirate-icono">
-          💡
-        </span>
-
-        <span class="inspirate-categoria">
-          PARA PENSAR
-        </span>
-
-        <span class="inspirate-flecha">
-          ⌄
-        </span>
-
-      </summary>
-
-
-      <div class="inspirate-card-contenido">
-
-        <div class="inspirate-portada">
-          <span>🤖</span>
-          <small>RTVE PLAY</small>
+      <header>
+        <div>
+          <h2>CONSUMO Y FINANZAS ÉTICAS</h2>
+          <p>
+            Nuestras decisiones de consumo
+            también tienen consecuencias.
+          </p>
         </div>
+      </header>
 
-        <h3>
-          Porno, IA y menores
-        </h3>
 
-        <div class="inspirate-tags">
-          <span>Tecnología</span>
-          <span>Ética</span>
-          <span>Sociedad</span>
-        </div>
+      <div class="recursos-inspirate">
 
-        <p>
-          Un espacio para reflexionar sobre inteligencia artificial,
-          menores, contenidos digitales y los nuevos desafíos
-          que plantea la tecnología.
-        </p>
 
-        <a
-          class="inspirate-boton"
-          href="https://www.rtve.es/noticias/20260514/ia-porno-deepfake-documental-en-portada/17067614.shtml"
-          target="_blank"
-          rel="noopener noreferrer">
-          ▶ Ver en RTVE Play
-        </a>
+        <article>
+
+          <div class="thumb thumb-consumo"></div>
+
+          <div>
+
+            <h3>Consumo</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Cómo han cambiado nuestros hábitos
+              y nuestra forma de comprar.
+            </p>
+
+            <a
+              href="https://www.rtve.es/play/videos/generaciones/generacion-consumo/5460779/"
+              target="_blank"
+              rel="noopener noreferrer">
+              VER EN RTVE →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div class="thumb thumb-fabrica"></div>
+
+          <div>
+
+            <h3>De la fábrica al consumidor</h3>
+
+            <span class="fuente">RTVE</span>
+
+            <p>
+              Producción, distribución, marketing,
+              consumo responsable y economía circular.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
-    </details>
+    </section>
+
+
+    <div class="cierre-inspirate">
+
+      <blockquote>
+        “La economía está en todas partes.
+        Solo hay que mirar con otros ojos.”
+      </blockquote>
+
+      <div>
+        <strong>PARA SEGUIR EXPLORANDO</strong>
+        <p>
+          Ideas, historias y ejemplos reales
+          para entender mejor el papel de la economía
+          en la sociedad.
+        </p>
+      </div>
+
+    </div>
 
   </div>
 
 </section>
 
-
 </main>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      PIE
-===================================================== -->
+========================================================= -->
 
 <footer class="pie">
 
   <strong>
-    🌱 EL AULA DE ECONOMÍA · de Beatriz
+    EL AULA DE <span>ECONOMÍA</span>
   </strong>
 
-  <span>
-    Entender para decidir.
-  </span>
+  <p>Entender para decidir.</p>
 
 </footer>
 
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
