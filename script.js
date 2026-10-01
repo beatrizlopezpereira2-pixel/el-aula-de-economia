@@ -1,311 +1,140 @@
-/* =========================================================
-   EL AULA DE ECONOMÍA · SCRIPT.JS
-   Navegación y elementos interactivos
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
   const inicio = document.getElementById("inicio");
   const niveles = document.getElementById("niveles");
   const pantallas = document.querySelectorAll(".pantalla");
 
-
-  /* =====================================================
-     FUNCIONES DE NAVEGACIÓN
-  ===================================================== */
-
   function ocultarTodo() {
+    if (inicio) inicio.style.display = "none";
+    if (niveles) niveles.style.display = "none";
 
-    if (inicio) {
-      inicio.style.display = "none";
-    }
-
-    if (niveles) {
-      niveles.style.display = "none";
-    }
-
-    pantallas.forEach((pantalla) => {
-      pantalla.classList.remove("activa");
+    pantallas.forEach(function (p) {
+      p.style.display = "none";
+      p.classList.remove("activa");
     });
   }
 
-
-  function mostrarInicio() {
+  function mostrar(id) {
 
     ocultarTodo();
-
-    if (inicio) {
-      inicio.style.display = "block";
-    }
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-
-  function mostrarNiveles() {
-
-    ocultarTodo();
-
-    if (niveles) {
-      niveles.style.display = "block";
-    }
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-
-  function mostrarPantalla(id) {
-
-    if (!id) return;
 
     if (id === "inicio") {
-      mostrarInicio();
-      return;
+      if (inicio) inicio.style.display = "block";
     }
 
-    if (id === "niveles") {
-      mostrarNiveles();
-      return;
+    else if (id === "niveles") {
+      if (niveles) niveles.style.display = "block";
     }
 
-    const destino = document.getElementById(id);
+    else {
+      const seccion = document.getElementById(id);
 
-    if (!destino) {
-      console.warn("No existe la sección:", id);
-      return;
+      if (seccion) {
+        seccion.style.display = "block";
+        seccion.classList.add("activa");
+      }
     }
 
-    /*
-      Si el destino es una pantalla independiente,
-      ocultamos el resto y la mostramos.
-    */
-
-    if (destino.classList.contains("pantalla")) {
-
-      ocultarTodo();
-
-      destino.classList.add("activa");
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-      return;
-    }
-
-
-    /*
-      Si el destino está dentro de otra pantalla
-      (por ejemplo un bloque de 4.º ESO),
-      mostramos primero su pantalla padre.
-    */
-
-    const pantallaPadre = destino.closest(".pantalla");
-
-    if (pantallaPadre) {
-
-      ocultarTodo();
-
-      pantallaPadre.classList.add("activa");
-
-      setTimeout(() => {
-
-        destino.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-      }, 50);
-
-      return;
-    }
-
-
-    /*
-      Elemento normal de la página
-    */
-
-    ocultarTodo();
-
-    destino.style.display = "block";
-
-    destino.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    window.scrollTo(0, 0);
   }
 
 
-  /* =====================================================
-     MENÚ SUPERIOR
-  ===================================================== */
+  /* MENÚ SUPERIOR */
 
-  document.querySelectorAll(".menu-principal a").forEach((enlace) => {
+  document.querySelectorAll(".menu-principal a").forEach(function (enlace) {
 
-    enlace.addEventListener("click", (evento) => {
+    enlace.addEventListener("click", function (e) {
 
-      evento.preventDefault();
+      e.preventDefault();
 
-      const href = enlace.getAttribute("href");
+      const id = enlace.getAttribute("href").substring(1);
 
-      if (!href) return;
-
-      const id = href.replace("#", "");
-
-      mostrarPantalla(id);
-    });
-
-  });
-
-
-  /* =====================================================
-     BOTONES DATA-IR
-  ===================================================== */
-
-  document.querySelectorAll("[data-ir]").forEach((boton) => {
-
-    boton.addEventListener("click", (evento) => {
-
-      evento.preventDefault();
-      evento.stopPropagation();
-
-      const destino = boton.dataset.ir;
-
-      mostrarPantalla(destino);
-    });
-
-  });
-
-
-  /* =====================================================
-     TARJETAS DE NIVELES
-  ===================================================== */
-
-  document.querySelectorAll("[data-destino]").forEach((tarjeta) => {
-
-    tarjeta.addEventListener("click", () => {
-
-      const destino = tarjeta.dataset.destino;
-
-      mostrarPantalla(destino);
-    });
-
-  });
-
-
-  /* =====================================================
-     BOTONES HOME
-  ===================================================== */
-
-  document.querySelectorAll(".btn-home").forEach((boton) => {
-
-    boton.addEventListener("click", (evento) => {
-
-      evento.preventDefault();
-      evento.stopPropagation();
-
-      mostrarInicio();
-    });
-
-  });
-
-
-  /* =====================================================
-     BLOQUES DE 4.º ESO
-  ===================================================== */
-
-  document.querySelectorAll("#cuarto-eso .bloque").forEach((bloque) => {
-
-    bloque.addEventListener("click", (evento) => {
-
-      /*
-        Si hacemos clic sobre un tema,
-        no cerramos el bloque.
-      */
-
-      if (evento.target.closest(".tema")) {
-        return;
-      }
-
-      const estabaAbierto = bloque.classList.contains("abierto");
-
-      /*
-        Cerramos los demás bloques.
-      */
-
-      document.querySelectorAll("#cuarto-eso .bloque").forEach((otro) => {
-
-        if (otro !== bloque) {
-          otro.classList.remove("abierto");
-        }
-
-      });
-
-      /*
-        Abrimos/cerramos el seleccionado.
-      */
-
-      if (estabaAbierto) {
-        bloque.classList.remove("abierto");
-      } else {
-        bloque.classList.add("abierto");
-      }
+      mostrar(id);
 
     });
 
   });
 
 
-  /* =====================================================
-     TEMAS DE 4.º ESO
-  ===================================================== */
+  /* BOTONES DATA-IR */
 
-  document.querySelectorAll("[data-tema]").forEach((tema) => {
+  document.querySelectorAll("[data-ir]").forEach(function (boton) {
 
-    tema.addEventListener("click", (evento) => {
+    boton.addEventListener("click", function (e) {
 
-      evento.preventDefault();
-      evento.stopPropagation();
+      e.preventDefault();
 
-      const destino = tema.dataset.tema;
+      mostrar(boton.getAttribute("data-ir"));
 
-      mostrarPantalla(destino);
     });
 
   });
 
 
-  /* =====================================================
-     PROYECTOS DESPLEGABLES
-  ===================================================== */
+  /* TARJETAS DE CURSOS */
 
-  document.querySelectorAll(".proyecto-desplegable").forEach((boton) => {
+  document.querySelectorAll("[data-destino]").forEach(function (tarjeta) {
 
-    boton.addEventListener("click", (evento) => {
+    tarjeta.addEventListener("click", function () {
 
-      evento.preventDefault();
-      evento.stopPropagation();
+      mostrar(tarjeta.getAttribute("data-destino"));
+
+    });
+
+  });
+
+
+  /* TEMAS */
+
+  document.querySelectorAll("[data-tema]").forEach(function (tema) {
+
+    tema.addEventListener("click", function (e) {
+
+      e.stopPropagation();
+
+      mostrar(tema.getAttribute("data-tema"));
+
+    });
+
+  });
+
+
+  /* BOTÓN HOME */
+
+  document.querySelectorAll(".btn-home").forEach(function (boton) {
+
+    boton.addEventListener("click", function () {
+
+      mostrar("inicio");
+
+    });
+
+  });
+
+
+  /* BLOQUES 4 ESO */
+
+  document.querySelectorAll("#cuarto-eso .bloque").forEach(function (bloque) {
+
+    bloque.addEventListener("click", function () {
+
+      bloque.classList.toggle("abierto");
+
+    });
+
+  });
+
+
+  /* PROYECTOS */
+
+  document.querySelectorAll(".proyecto-desplegable").forEach(function (boton) {
+
+    boton.addEventListener("click", function () {
 
       const proyecto = boton.closest(".proyecto-transversal");
 
-      if (!proyecto) return;
-
-      proyecto.classList.toggle("abierto");
-
-      const flecha = boton.querySelector(".flecha-proyecto");
-
-      if (flecha) {
-
-        flecha.textContent =
-          proyecto.classList.contains("abierto") ? "⌃" : "⌄";
-
+      if (proyecto) {
+        proyecto.classList.toggle("abierto");
       }
 
     });
@@ -313,85 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* =====================================================
-     INSPÍRATE · ACORDEONES
-  ===================================================== */
+  /* AL CARGAR: INICIO */
 
-  document.querySelectorAll(".inspirate-categoria").forEach((categoria) => {
-
-    const boton =
-      categoria.querySelector(".inspirate-categoria-boton") ||
-      categoria.querySelector("button");
-
-    if (!boton) return;
-
-    boton.addEventListener("click", () => {
-
-      const estabaAbierta = categoria.classList.contains("abierta");
-
-      /*
-        Cerramos las demás categorías.
-      */
-
-      document.querySelectorAll(".inspirate-categoria").forEach((otra) => {
-
-        if (otra !== categoria) {
-          otra.classList.remove("abierta");
-        }
-
-      });
-
-      /*
-        Abrimos/cerramos la seleccionada.
-      */
-
-      if (estabaAbierta) {
-        categoria.classList.remove("abierta");
-      } else {
-        categoria.classList.add("abierta");
-      }
-
-    });
-
-  });
-
-
-  /* =====================================================
-     DETAILS / EJERCICIOS CORREGIDOS
-  ===================================================== */
-
-  document.querySelectorAll("details").forEach((detalle) => {
-
-    detalle.addEventListener("toggle", () => {
-
-      if (!detalle.open) return;
-
-      /*
-        Dejamos abierto únicamente el ejercicio
-        que el alumno está consultando.
-      */
-
-      const contenedor = detalle.parentElement;
-
-      if (!contenedor) return;
-
-      contenedor.querySelectorAll("details").forEach((otro) => {
-
-        if (otro !== detalle) {
-          otro.open = false;
-        }
-
-      });
-
-    });
-
-  });
-
-
-  /* =====================================================
-     ESTADO INICIAL
-  ===================================================== */
-
-  mostrarInicio();
+  mostrar("inicio");
 
 });
