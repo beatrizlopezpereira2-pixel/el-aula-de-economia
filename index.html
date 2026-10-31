@@ -119,6 +119,8 @@
 
 
 <style>
+/* Foto personal en la tarjeta Quién soy */
+#sobre-mi .foto-beatriz{display:block !important;width:112px;height:112px;object-fit:cover;border-radius:50%;border:3px solid #ffd21c;margin:8px auto 14px;box-shadow:0 3px 12px rgba(0,0,0,.12)}
 /* ÚLTIMOS AJUSTES: vídeo real, Sobre mí más limpio */
 .youtube-video{
   margin-top:18px;
@@ -178,6 +180,11 @@
 }
 </style>
 
+<style>
+.foto-beatriz{width:105px;height:105px;object-fit:cover;border-radius:50%;border:4px solid #ffd21c;float:right;margin:0 0 12px 18px}
+.otros-recursos{grid-column:1/-1;border-top:5px solid #ffd21c}.otros-recursos details{margin-top:14px}.otros-recursos summary{cursor:pointer}.otros-recursos .contenido-desplegable{padding:16px 0}
+.sopa-tablero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));max-width:490px;gap:2px;margin:15px 0}.sopa-tablero button{aspect-ratio:1;border:1px solid #ddd;background:#fafafa;font-size:clamp(10px,2vw,16px);font-weight:bold;cursor:pointer;padding:0}.sopa-tablero button.elegida{background:#ffd21c}.sopa-tablero button.encontrada{background:#171717;color:#ffd21c}.sopa-pista{margin:5px 0}.sopa-pista.lista{text-decoration:line-through;color:#666}.parejas-tablero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.parejas-tablero button{min-height:64px;padding:10px;background:#fff;border:2px solid #ddd;cursor:pointer;text-align:left}.parejas-tablero button.seleccionada{border-color:#111;background:#ffd21c}.parejas-tablero button.acertada{background:#111;color:#ffd21c;border-color:#111}.parejas-tablero button:disabled{cursor:default}@media(max-width:600px){.foto-beatriz{width:80px;height:80px}.parejas-tablero{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body>
@@ -557,11 +564,10 @@
 
           <small>MICROLEARNING</small>
 
-          <h3>VÍDEO EXPLICATIVO</h3>
+          <h3>VÍDEO: PLICKERS</h3>
 
           <p>
-            Una explicación visual y breve de las principales
-            ideas del tema antes de comenzar a practicar.
+            Vídeo propio sobre Plickers: una herramienta para realizar evaluación interactiva en el aula.
           </p>
 
         </div>
@@ -571,8 +577,8 @@
 
           <div class="youtube-video">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/thTJMpkr5js"
-              title="La actividad económica y sus agentes · Profe de Economía"
+              src="https://www.youtube-nocookie.com/embed/0HwXO-akgTc"
+              title="Plickers · Enseño a mis compañeros · Beatriz López Pereira"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen>
@@ -976,6 +982,18 @@
 
       </article>
 
+
+    <article class="repasa-card otros-recursos" id="otros-recursos">
+      <span class="numero-amarillo">04</span><small>APRENDE JUGANDO</small>
+      <h3>OTROS RECURSOS</h3><p>Repasa los conceptos de la actividad económica mediante dos juegos interactivos.</p>
+      <details><summary class="btn-amarillo">ENCUENTRA EL CONCEPTO →</summary>
+        <div class="contenido-desplegable"><p>Lee las definiciones y encuentra las palabras en la sopa de letras. Haz clic en la primera y la última letra de cada palabra.</p>
+        <div id="sopa-pistas"></div><div id="sopa-tablero" class="sopa-tablero" aria-label="Sopa de letras interactiva"></div><p id="sopa-estado" aria-live="polite"></p><button type="button" class="btn-amarillo" id="sopa-reiniciar">REINICIAR</button></div>
+      </details>
+      <details><summary class="btn-amarillo">PAREJAS ECONÓMICAS →</summary>
+        <div class="contenido-desplegable"><p>Selecciona un concepto y después su definición correspondiente.</p><div id="parejas-tablero" class="parejas-tablero"></div><p id="parejas-estado" aria-live="polite"></p><button type="button" class="btn-amarillo" id="parejas-reiniciar">REINICIAR</button></div>
+      </details>
+    </article>
     </div>
 
   </section>
@@ -1472,6 +1490,7 @@
 
     <article class="sobre-bloque sobre-card-compacta">
       <h2><span>1.</span> QUIÉN SOY</h2>
+      <img class="foto-beatriz" src="foto-beatriz.jpg" alt="Fotografía de Beatriz López Pereira" onerror="this.style.display='none'">
       <p>Me llamo <strong>Beatriz</strong>. Soy graduada en <strong>Contabilidad y Finanzas</strong> y miembro del <strong>Colegio de Economistas de Madrid</strong>.</p>
       <p>Actualmente estoy realizando el <strong>Máster de Formación del Profesorado de Educación Secundaria y Bachillerato</strong>, en la especialidad de Economía y Empresa, en la <strong>Universidad Rey Juan Carlos</strong>.</p>
     </article>
@@ -1857,5 +1876,17 @@
 document.addEventListener("DOMContentLoaded",()=>{const inicio=document.getElementById("inicio"),pantallas=document.querySelectorAll(".pantalla");function mostrar(id){if(inicio)inicio.style.display="none";pantallas.forEach(p=>{p.style.display="none";p.classList.remove("activa")});const el=id==="inicio"?inicio:document.getElementById(id);if(el){el.style.display="block";if(id!=="inicio")el.classList.add("activa")}history.replaceState(null,"","#"+id);window.scrollTo({top:0,behavior:"smooth"})}document.querySelectorAll("[data-ir]").forEach(e=>e.addEventListener("click",ev=>{ev.preventDefault();mostrar(e.dataset.ir)}));document.querySelectorAll("[data-destino]").forEach(e=>e.addEventListener("click",()=>mostrar(e.dataset.destino)));document.querySelectorAll("[data-tema]").forEach(e=>e.addEventListener("click",ev=>{ev.preventDefault();ev.stopPropagation();mostrar(e.dataset.tema)}));document.querySelectorAll(".menu-principal a").forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault();mostrar(a.getAttribute("href").slice(1))}));const hash=location.hash.slice(1);mostrar(hash&&document.getElementById(hash)?hash:"inicio")});
 </script>
 
+<script>
+(function(){
+const terms=[['ECONOMIA','Ciencia que estudia cómo administrar recursos escasos.'],['ESCASEZ','Situación en la que los recursos son limitados frente a las necesidades.'],['TRABAJO','Actividad humana que interviene en la producción.'],['CAPITAL','Bienes utilizados para producir otros bienes y servicios.'],['CONSUMO','Utilización de bienes y servicios para satisfacer necesidades.']];
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function sopa(){const board=document.getElementById('sopa-tablero');if(!board)return;let grid=Array.from({length:12},()=>Array(12).fill(''));let locations=[];const dirs=[[0,1],[1,0],[1,1]];
+terms.forEach(([word],index)=>{let placed=false;for(let n=0;n<300&&!placed;n++){const [dr,dc]=dirs[Math.floor(Math.random()*dirs.length)],r=Math.floor(Math.random()*12),c=Math.floor(Math.random()*12);if(r+dr*(word.length-1)>=12||c+dc*(word.length-1)>=12)continue;let coords=[...word].map((_,i)=>[r+dr*i,c+dc*i]);if(coords.some(([x,y],i)=>grid[x][y]&&grid[x][y]!==word[i]))continue;coords.forEach(([x,y],i)=>grid[x][y]=word[i]);locations[index]=coords.map(([x,y])=>x*12+y);placed=true}});
+const abc='ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';grid=grid.map(row=>row.map(ch=>ch||abc[Math.floor(Math.random()*abc.length)]));board.innerHTML='';let first=null,found=new Set();const status=document.getElementById('sopa-estado');const hints=document.getElementById('sopa-pistas');hints.innerHTML=terms.map(([w,d],i)=>`<p class="sopa-pista" id="pista-${i}"><strong>${i+1}.</strong> ${d}</p>`).join('');
+grid.flat().forEach((letter,i)=>{const b=document.createElement('button');b.type='button';b.textContent=letter;b.setAttribute('aria-label',`Fila ${Math.floor(i/12)+1}, columna ${i%12+1}: ${letter}`);b.addEventListener('click',()=>{if(first===null){first=i;b.classList.add('elegida');status.textContent='Selecciona la última letra de la palabra.';return}let matched=false;locations.forEach((coords,k)=>{if(found.has(k)||!coords)return;if((coords[0]===first&&coords.at(-1)===i)||(coords.at(-1)===first&&coords[0]===i)){found.add(k);coords.forEach(j=>board.children[j].classList.add('encontrada'));document.getElementById(`pista-${k}`).classList.add('lista');matched=true}});board.children[first].classList.remove('elegida');first=null;status.textContent=matched?`¡Correcto! ${found.size} de ${terms.length} conceptos encontrados.`:'No coincide. Prueba otra vez.';if(found.size===terms.length)status.textContent='¡Enhorabuena! Has encontrado todos los conceptos.'});board.appendChild(b)});status.textContent='0 de 5 conceptos encontrados.'}
+function parejas(){const root=document.getElementById('parejas-tablero');if(!root)return;root.innerHTML='';const cards=shuffle(terms.flatMap(([word,def],id)=>[{id,type:'word',text:word},{id,type:'def',text:def}]));let selected=null,matched=new Set();const status=document.getElementById('parejas-estado');cards.forEach(card=>{const b=document.createElement('button');b.type='button';b.textContent=card.text;b.addEventListener('click',()=>{if(b.disabled)return;if(!selected){selected={card,b};b.classList.add('seleccionada');return}selected.b.classList.remove('seleccionada');if(selected.b===b){selected=null;return}if(selected.card.id===card.id&&selected.card.type!==card.type){b.classList.add('acertada');selected.b.classList.add('acertada');b.disabled=selected.b.disabled=true;matched.add(card.id);status.textContent=`¡Bien! ${matched.size} de ${terms.length} parejas.`;if(matched.size===terms.length)status.textContent='¡Enhorabuena! Has completado todas las parejas.'}else{status.textContent='No coinciden. Inténtalo de nuevo.'}selected=null});root.appendChild(b)});status.textContent='0 de 5 parejas.'}
+document.addEventListener('DOMContentLoaded',()=>{sopa();parejas();document.getElementById('sopa-reiniciar')?.addEventListener('click',sopa);document.getElementById('parejas-reiniciar')?.addEventListener('click',parejas)});
+})();
+</script>
 </body>
 </html>
