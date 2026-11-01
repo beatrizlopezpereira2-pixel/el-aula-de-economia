@@ -185,6 +185,18 @@
 .otros-recursos{grid-column:1/-1;border-top:5px solid #ffd21c}.otros-recursos details{margin-top:14px}.otros-recursos summary{cursor:pointer}.otros-recursos .contenido-desplegable{padding:16px 0}
 .sopa-tablero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));max-width:490px;gap:2px;margin:15px 0}.sopa-tablero button{aspect-ratio:1;border:1px solid #ddd;background:#fafafa;font-size:clamp(10px,2vw,16px);font-weight:bold;cursor:pointer;padding:0}.sopa-tablero button.elegida{background:#ffd21c}.sopa-tablero button.encontrada{background:#171717;color:#ffd21c}.sopa-pista{margin:5px 0}.sopa-pista.lista{text-decoration:line-through;color:#666}.parejas-tablero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.parejas-tablero button{min-height:64px;padding:10px;background:#fff;border:2px solid #ddd;cursor:pointer;text-align:left}.parejas-tablero button.seleccionada{border-color:#111;background:#ffd21c}.parejas-tablero button.acertada{background:#111;color:#ffd21c;border-color:#111}.parejas-tablero button:disabled{cursor:default}@media(max-width:600px){.foto-beatriz{width:80px;height:80px}.parejas-tablero{grid-template-columns:1fr}}
 </style>
+</style>
+<style id="seguimiento-temas-css">
+.matriz-opciones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:1180px;margin:20px auto;padding:0 5vw}
+.matriz-opcion{background:#171717;color:#ffd21c;border:2px solid #ffd21c;border-radius:12px;cursor:pointer;padding:20px 10px;text-align:center;font-family:inherit;min-height:105px}
+.matriz-opcion strong{display:block;font-size:clamp(14px,1.7vw,22px)}.matriz-opcion small{display:block;color:#fff;font-size:12px;margin-top:8px}.matriz-opcion .porcentaje{display:block;margin-top:8px;font-weight:800}
+.matriz-opcion.activo{background:#ffd21c;color:#111}.matriz-opcion.activo small{color:#111}.matriz-opcion.activo .porcentaje{color:#111}
+.progreso-tema{max-width:1060px;margin:20px auto 0;padding:20px;background:#171717;color:#fff;border-radius:12px}.progreso-tema .progreso-cabecera{display:flex;justify-content:space-between;gap:15px;align-items:center}.progreso-tema strong{color:#ffd21c;font-size:26px}.progreso-barra{height:12px;background:#555;border-radius:20px;overflow:hidden;margin:12px 0}.progreso-barra>span{display:block;background:#ffd21c;height:100%;width:0;transition:width .2s}.progreso-tema p{margin:0;color:#eee;font-size:13px}
+#tema-1 .contenido-panel{max-width:1180px;margin:0 auto 22px;padding:20px 5vw 25px;scroll-margin-top:90px}#tema-1 .contenido-panel[hidden]{display:none!important}
+#tema-1 .zona-juega .otros-recursos{max-width:100%}.seguimiento-panel{margin:20px 0 0;padding:20px;background:#fff9dc;border:1px solid #e1bc1d;border-radius:10px;color:#171717}.seguimiento-panel h3{margin:0 0 5px}.seguimiento-panel label{display:flex;gap:10px;align-items:flex-start;margin:11px 0;cursor:pointer}.seguimiento-panel input{accent-color:#b48b00;width:19px;height:19px;flex-shrink:0}.seguimiento-panel .contador{font-weight:bold;margin:12px 0 0}
+.proyecto-ficha{background:#fff;border:2px solid #e5b900;padding:22px;border-radius:10px}.proyecto-ficha ol{line-height:1.7}.semana-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.semana-grid article{background:#fff8d6;border-left:4px solid #e5b900;padding:14px}.semana-grid strong{display:block}.proyecto-global-parte{padding:18px;background:#fff9d8;border-left:5px solid #e5b900}
+@media(max-width:700px){.matriz-opciones{grid-template-columns:repeat(2,1fr);padding:0 12px}.matriz-opcion{min-height:90px;padding:12px 6px}.semana-grid{grid-template-columns:1fr}.progreso-tema{margin:15px 12px}}
+</style>
 </head>
 
 <body>
@@ -1887,6 +1899,44 @@ grid.flat().forEach((letter,i)=>{const b=document.createElement('button');b.type
 function parejas(){const root=document.getElementById('parejas-tablero');if(!root)return;root.innerHTML='';const cards=shuffle(terms.flatMap(([word,def],id)=>[{id,type:'word',text:word},{id,type:'def',text:def}]));let selected=null,matched=new Set();const status=document.getElementById('parejas-estado');cards.forEach(card=>{const b=document.createElement('button');b.type='button';b.textContent=card.text;b.addEventListener('click',()=>{if(b.disabled)return;if(!selected){selected={card,b};b.classList.add('seleccionada');return}selected.b.classList.remove('seleccionada');if(selected.b===b){selected=null;return}if(selected.card.id===card.id&&selected.card.type!==card.type){b.classList.add('acertada');selected.b.classList.add('acertada');b.disabled=selected.b.disabled=true;matched.add(card.id);status.textContent=`¡Bien! ${matched.size} de ${terms.length} parejas.`;if(matched.size===terms.length)status.textContent='¡Enhorabuena! Has completado todas las parejas.'}else{status.textContent='No coinciden. Inténtalo de nuevo.'}selected=null});root.appendChild(b)});status.textContent='0 de 5 parejas.'}
 document.addEventListener('DOMContentLoaded',()=>{sopa();parejas();document.getElementById('sopa-reiniciar')?.addEventListener('click',sopa);document.getElementById('parejas-reiniciar')?.addEventListener('click',parejas)});
 })();
+</script>
+
+<script id="seguimiento-temas-js">
+document.addEventListener('DOMContentLoaded',function(){
+ const tema=document.getElementById('tema-1');if(!tema)return;
+ const zonas=[...tema.querySelectorAll(':scope > section.zona-contenido')];
+ const estudia=zonas.find(x=>!x.classList.contains('zona-repasa'));
+ const repasa=zonas.find(x=>x.classList.contains('zona-repasa'));
+ const juegos=tema.querySelector('#otros-recursos');
+ if(!estudia||!repasa||!juegos)return;
+ const juegoZona=document.createElement('section');juegoZona.className='zona-juega contenido-panel';juegoZona.innerHTML='<header class="titulo-zona"><div><h2>JUEGA</h2><p>Aprende con los juegos interactivos del tema.</p></div></header>';
+ juegoZona.appendChild(juegos);repasa.insertAdjacentElement('afterend',juegoZona);
+ const proyecto=document.createElement('section');proyecto.className='proyecto-tema contenido-panel';proyecto.id='proyecto-tema-1';
+ proyecto.innerHTML=`<div class="proyecto-ficha"><span class="eyebrow">MI PROYECTO EMPRENDEDOR · TEMA 1</span><h2>Parte 1 · Detectamos una necesidad</h2><p><strong>Objetivo:</strong> detectar un problema real del entorno y proponer una primera solución emprendedora, teniendo en cuenta los recursos escasos.</p><h3>Pasos en el aula</h3><ol><li>Observa el instituto, barrio o localidad y anota tres necesidades.</li><li>Explica a quién afecta cada necesidad y qué recursos se necesitan.</li><li>Comparte las ideas y participa en la lluvia de ideas del equipo.</li><li>Selecciona una necesidad y justifica la elección.</li><li>Reparte las responsabilidades del equipo.</li><li>Elabora una ficha con necesidad, destinatarios, recursos y primera propuesta.</li></ol><h3>Distribución orientativa · 2 semanas</h3><div class="semana-grid"><article><strong>Semana 1 · Investigar</strong>Observación del entorno, tres necesidades y lluvia de ideas.</article><article><strong>Semana 2 · Decidir y entregar</strong>Elegir la necesidad, organizar el equipo y entregar la ficha inicial.</article></div><p><strong>Producto de entrega:</strong> ficha inicial del proyecto emprendedor.</p></div>`;
+ juegoZona.insertAdjacentElement('afterend',proyecto);
+ const grupos=[
+ {titulo:'ESTUDIA',sub:'Apuntes y vídeos',el:estudia,tareas:['He consultado los apuntes del Tema 1','He visto el vídeo explicativo']},
+ {titulo:'REPASA',sub:'Autotest y dos ejercicios',el:repasa,tareas:['He realizado el autotest','He terminado el ejercicio 1','He terminado el ejercicio 2']},
+ {titulo:'JUEGA',sub:'Dos juegos interactivos',el:juegoZona,tareas:['He completado la sopa de letras','He completado Parejas económicas']},
+ {titulo:'MI PROYECTO',sub:'Pasos en el aula',el:proyecto,tareas:['He identificado tres necesidades','He participado en la lluvia de ideas','He seleccionado y justificado una necesidad','He organizado las tareas del equipo','He elaborado y entregado la ficha inicial']}
+ ];
+ const storageKey='aula-economia-progreso-tema-1-v1';let estado={};try{estado=JSON.parse(localStorage.getItem(storageKey)||'{}')||{}}catch(e){}
+ const progreso=document.createElement('div');progreso.className='progreso-tema';progreso.innerHTML='<div class="progreso-cabecera"><span>MI PROGRESO · TEMA 1</span><strong id="progreso-num">0%</strong></div><div class="progreso-barra"><span id="progreso-relleno"></span></div><p id="progreso-estado">En curso · Evaluación pendiente</p>';
+ const nav=document.createElement('nav');nav.className='matriz-opciones';nav.setAttribute('aria-label','Materiales y seguimiento del tema');
+ const botones=[];
+ function actualizar(){let hechos=0,total=0;grupos.forEach((g,i)=>{let n=g.tareas.filter((_,j)=>estado[i+'-'+j]).length;hechos+=n;total+=g.tareas.length;botones[i].querySelector('.porcentaje').textContent=Math.round(100*n/g.tareas.length)+'%';const c=g.el.querySelector('.contador');if(c)c.textContent=n+' de '+g.tareas.length+' actividades realizadas';});let p=Math.round(100*hechos/total);progreso.querySelector('#progreso-num').textContent=p+'%';progreso.querySelector('#progreso-relleno').style.width=p+'%';progreso.querySelector('#progreso-estado').textContent=p===100?'Actividades finalizadas · Pendiente de evaluación docente':'En curso · Evaluación pendiente';try{localStorage.setItem(storageKey,JSON.stringify(estado))}catch(e){}}
+ function abrir(i){grupos.forEach((g,j)=>{g.el.hidden=i!==j;botones[j].classList.toggle('activo',i===j);botones[j].setAttribute('aria-pressed',String(i===j))});}
+ grupos.forEach((g,i)=>{
+ g.el.classList.add('contenido-panel');
+ const b=document.createElement('button');b.type='button';b.className='matriz-opcion';b.innerHTML='<strong>'+g.titulo+'</strong><small>'+g.sub+'</small><span class="porcentaje">0%</span>';b.addEventListener('click',()=>abrir(i));nav.appendChild(b);botones.push(b);
+ const seg=document.createElement('div');seg.className='seguimiento-panel';seg.innerHTML='<h3>2. MI SEGUIMIENTO</h3><p>Marca lo que hayas realizado. El progreso se guarda en este navegador.</p>';
+ g.tareas.forEach((t,j)=>{const label=document.createElement('label');const check=document.createElement('input');check.type='checkbox';check.checked=!!estado[i+'-'+j];check.addEventListener('change',()=>{estado[i+'-'+j]=check.checked;actualizar()});label.append(check,document.createTextNode(t));seg.appendChild(label)});
+ const c=document.createElement('p');c.className='contador';seg.appendChild(c);g.el.appendChild(seg);
+ });
+ const hero=tema.querySelector('.tema-hero');if(hero){hero.insertAdjacentElement('afterend',nav);nav.insertAdjacentElement('beforebegin',progreso)}else{tema.prepend(nav);tema.prepend(progreso)}
+ const globalTitle=[...document.querySelectorAll('.proyecto-item summary h2')].find(x=>x.textContent.trim()==='MI PROYECTO EMPRENDEDOR');if(globalTitle){const details=globalTitle.closest('details');if(details&&!details.querySelector('.proyecto-global-parte')){const x=document.createElement('div');x.className='proyecto-global-parte';x.innerHTML='<strong>Parte 1 · Tema 1 · Detectamos una necesidad</strong><p>Semanas 1 y 2: observación, selección de una necesidad y ficha inicial. Los pasos y las casillas están dentro de Tema 1 → MI PROYECTO.</p>';details.appendChild(x)}}
+ abrir(0);actualizar();
+});
 </script>
 </body>
 </html>
